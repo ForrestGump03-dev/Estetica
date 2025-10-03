@@ -41,7 +41,7 @@ const reviews = [
 
 export default function ReviewsSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-rose-50 to-amber-50">
+    <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-6">
@@ -57,7 +57,7 @@ export default function ReviewsSection() {
             <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow relative">
               {/* Quote icon */}
               <div className="absolute top-6 right-6">
-                <Quote className="h-8 w-8 text-rose-200" />
+                <Quote className="h-8 w-8 text-amber-200" />
               </div>
 
               {/* Stars */}
@@ -77,7 +77,7 @@ export default function ReviewsSection() {
                 <div className="font-semibold text-gray-800 mb-1">
                   {review.name}
                 </div>
-                <div className="text-sm text-rose-500 font-medium">
+                <div className="text-sm text-amber-600 font-medium">
                   {review.treatment}
                 </div>
               </div>

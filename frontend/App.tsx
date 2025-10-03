@@ -29,7 +29,7 @@ export default function App() {
     <div className="dark">
       <Router>
         <ScrollToAnchor />
-        <div className="min-h-screen bg-gradient-to-br from-rose-50 to-amber-50">
+        <div className="min-h-screen bg-gradient-to-br from-stone-200 via-amber-100 to-orange-100">
           <Header />
           <main>
             <Routes>

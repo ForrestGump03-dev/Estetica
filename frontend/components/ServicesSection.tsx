@@ -40,9 +40,9 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {services.map((service, index) => (
             <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="bg-gradient-to-br from-rose-100 to-amber-100 rounded-2xl p-8 h-full">
+              <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl p-8 h-full">
                 <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
-                  <service.icon className="h-8 w-8 text-rose-500" />
+                  <service.icon className="h-8 w-8 text-amber-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">
                   {service.title}
@@ -58,7 +58,7 @@ export default function ServicesSection() {
         <div className="text-center">
           <Link 
             to="/servizi" 
-            className="inline-flex items-center gap-2 bg-rose-500 text-white px-8 py-4 rounded-full hover:bg-rose-600 transition-colors text-lg font-medium"
+            className="inline-flex items-center gap-2 bg-amber-600 text-white px-8 py-4 rounded-full hover:bg-amber-700 transition-colors text-lg font-medium shadow-lg"
           >
             Vedi Tutti i Servizi
             <Sparkles className="h-5 w-5" />

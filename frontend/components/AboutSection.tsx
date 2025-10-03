@@ -2,7 +2,7 @@ import { Award, Users, Clock, Heart } from 'lucide-react'
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-rose-50 to-amber-50">
+    <section className="py-20 bg-gradient-to-br from-stone-200 via-amber-100 to-orange-100">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -24,7 +24,7 @@ export default function AboutSection() {
             {/* Stats */}
             <div className="flex justify-center lg:justify-start">
               <div className="text-center bg-white rounded-2xl shadow-lg px-8 py-6">
-                <div className="text-4xl font-bold text-rose-500 mb-2">20+</div>
+                <div className="text-4xl font-bold text-amber-600 mb-2">20+</div>
                 <div className="text-gray-600 font-medium">Anni di Esperienza</div>
               </div>
             </div>
@@ -33,8 +33,8 @@ export default function AboutSection() {
           {/* Features */}
           <div className="space-y-6">
             <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg">
-              <div className="bg-rose-100 rounded-full p-3">
-                <Award className="h-6 w-6 text-rose-500" />
+              <div className="bg-amber-100 rounded-full p-3">
+                <Award className="h-6 w-6 text-amber-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Esperienza Certificata</h3>
@@ -43,8 +43,8 @@ export default function AboutSection() {
             </div>
 
             <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg">
-              <div className="bg-rose-100 rounded-full p-3">
-                <Users className="h-6 w-6 text-rose-500" />
+              <div className="bg-amber-100 rounded-full p-3">
+                <Users className="h-6 w-6 text-amber-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Attenzione Personalizzata</h3>
@@ -53,8 +53,8 @@ export default function AboutSection() {
             </div>
 
             <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg">
-              <div className="bg-rose-100 rounded-full p-3">
-                <Clock className="h-6 w-6 text-rose-500" />
+              <div className="bg-amber-100 rounded-full p-3">
+                <Clock className="h-6 w-6 text-amber-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Orari Flessibili</h3>
@@ -63,8 +63,8 @@ export default function AboutSection() {
             </div>
 
             <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg">
-              <div className="bg-rose-100 rounded-full p-3">
-                <Heart className="h-6 w-6 text-rose-500" />
+              <div className="bg-amber-100 rounded-full p-3">
+                <Heart className="h-6 w-6 text-amber-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Ambiente Curato</h3>

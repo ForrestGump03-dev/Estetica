@@ -187,12 +187,12 @@ export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-rose-100 to-amber-100 py-20">
+      <section className="bg-gradient-to-r from-amber-100 to-orange-100 py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <Sparkles className="h-8 w-8 text-rose-500" />
+            <Sparkles className="h-8 w-8 text-amber-600" />
             <h1 className="text-4xl md:text-6xl font-serif text-gray-800">I Nostri Servizi</h1>
-            <Sparkles className="h-8 w-8 text-rose-500" />
+            <Sparkles className="h-8 w-8 text-amber-600" />
           </div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Scopri la nostra gamma completa di trattamenti professionali per la cura del corpo e del viso
@@ -211,7 +211,7 @@ export default function Services() {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.items.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-rose-100">
+                    <div key={serviceIndex} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-amber-200">
                       <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                         {service.name}
                       </h3>
@@ -233,7 +233,7 @@ export default function Services() {
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, idx) => (
                             <li key={idx} className="text-gray-600 text-sm flex items-start gap-2">
-                              <span className="text-rose-500 leading-normal">•</span>
+                              <span className="text-amber-600 leading-normal">•</span>
                               <span>{benefit}</span>
                             </li>
                           ))}
@@ -243,7 +243,7 @@ export default function Services() {
                       {/* Durata */}
                       <div className="mb-6 pt-4 border-t border-gray-200">
                         <div className="flex items-center gap-2 text-gray-700 mb-2">
-                          <Clock className="h-4 w-4 text-rose-500" />
+                          <Clock className="h-4 w-4 text-amber-600" />
                           <span className="font-semibold">DURATA:</span>
                           <span>{service.duration}</span>
                         </div>
@@ -257,7 +257,7 @@ export default function Services() {
                       
                       <a 
                         href="/#contatti"
-                        className="block w-full bg-rose-500 text-white py-3 rounded-full hover:bg-rose-600 transition-colors text-center font-medium"
+                        className="block w-full bg-amber-600 text-white py-3 rounded-full hover:bg-amber-700 transition-colors text-center font-medium shadow-md"
                       >
                         Prenota Ora
                       </a>
@@ -271,12 +271,12 @@ export default function Services() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-rose-50/50 py-20">
+      <section className="bg-amber-50/50 py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <Award className="h-8 w-8 text-rose-500" />
+                <Award className="h-8 w-8 text-amber-600" />
               </div>
               <h3 className="font-semibold text-gray-800 mb-2">Esperienza Certificata</h3>
               <p className="text-gray-600">
@@ -285,7 +285,7 @@ export default function Services() {
             </div>
             <div className="text-center">
               <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <Sparkles className="h-8 w-8 text-rose-500" />
+                <Sparkles className="h-8 w-8 text-amber-600" />
               </div>
               <h3 className="font-semibold text-gray-800 mb-2">Tecnologie Moderne</h3>
               <p className="text-gray-600">
@@ -294,7 +294,7 @@ export default function Services() {
             </div>
             <div className="text-center">
               <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <Users className="h-8 w-8 text-rose-500" />
+                <Users className="h-8 w-8 text-amber-600" />
               </div>
               <h3 className="font-semibold text-gray-800 mb-2">Attenzione Personalizzata</h3>
               <p className="text-gray-600">

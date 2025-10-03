@@ -60,7 +60,7 @@ export default function BeforeAfterSection() {
 
         <div className="max-w-4xl mx-auto">
           {/* Main slider */}
-          <div className="relative bg-gradient-to-br from-rose-50 to-amber-50 rounded-3xl p-8 shadow-lg">
+          <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Before Image */}
               <div className="relative">
@@ -95,7 +95,7 @@ export default function BeforeAfterSection() {
                         target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRkVGM0Y0Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRUY0NDQ0IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiPkFnZ2l1bmdpIGxlIHR1ZSBmb3RvPC90ZXh0Pgo8L3N2Zz4='
                       }}
                     />
-                    <div className="absolute top-3 left-3 bg-rose-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute top-3 left-3 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       DOPO
                     </div>
                   </div>
@@ -132,16 +132,16 @@ export default function BeforeAfterSection() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentIndex ? 'bg-rose-500' : 'bg-gray-300'
+                  index === currentIndex ? 'bg-amber-600' : 'bg-gray-300'
                 }`}
               />
             ))}
           </div>
 
           {/* Note */}
-          <div className="text-center mt-8 bg-rose-50 rounded-xl p-6">
+          <div className="text-center mt-8 bg-amber-50 rounded-xl p-6">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <Camera className="h-5 w-5 text-rose-500" />
+              <Camera className="h-5 w-5 text-amber-600" />
               <span className="font-medium text-gray-800">Risultati Reali</span>
             </div>
             <p className="text-gray-600 text-sm">

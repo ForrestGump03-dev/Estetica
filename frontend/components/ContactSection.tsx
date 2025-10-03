@@ -6,7 +6,7 @@ export default function ContactSection() {
   const whatsappMessage = "Ciao! Vorrei prenotare un appuntamento."
 
   return (
-    <section id="contatti" className="py-20 bg-gradient-to-br from-rose-50 to-amber-50">
+    <section id="contatti" className="py-20 bg-gradient-to-br from-stone-200 via-amber-100 to-orange-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-6">
@@ -21,8 +21,8 @@ export default function ContactSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="bg-rose-100 rounded-full p-4 flex-shrink-0">
-                  <MapPin className="h-7 w-7 text-rose-500" />
+                <div className="bg-amber-100 rounded-full p-4 flex-shrink-0">
+                  <MapPin className="h-7 w-7 text-amber-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 text-xl mb-2">Dove Siamo</h3>
@@ -30,7 +30,7 @@ export default function ContactSection() {
                     href="https://maps.app.goo.gl/udGkG4NE4qyu2o359" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-rose-500 transition-colors text-lg"
+                    className="text-gray-600 hover:text-amber-600 transition-colors text-lg"
                   >
                     Via Titina De Filippo 36<br />
                     90129 Palermo
@@ -42,12 +42,15 @@ export default function ContactSection() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="bg-rose-100 rounded-full p-4 flex-shrink-0">
-                  <Phone className="h-7 w-7 text-rose-500" />
+                <div className="bg-amber-100 rounded-full p-4 flex-shrink-0">
+                  <Phone className="h-7 w-7 text-amber-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 text-xl mb-2">Telefono</h3>
-                  <a href={`tel:${phoneNumber}`} className="text-gray-600 hover:text-rose-500 transition-colors text-lg block">
+                  <a 
+                    href={`tel:${phoneNumber}`} 
+                    className="text-gray-600 hover:text-amber-600 transition-colors text-lg block"
+                  >
                     091 382 4716
                   </a>
                   <p className="text-sm text-gray-500 mt-2">Chiamaci per prenotazioni</p>
@@ -57,12 +60,12 @@ export default function ContactSection() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="bg-rose-100 rounded-full p-4 flex-shrink-0">
-                  <Mail className="h-7 w-7 text-rose-500" />
+                <div className="bg-amber-100 rounded-full p-4 flex-shrink-0">
+                  <Mail className="h-7 w-7 text-amber-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 text-xl mb-2">Email</h3>
-                  <a href="mailto:soniaforestieri@hotmail.it" className="text-gray-600 hover:text-rose-500 transition-colors text-lg break-all">
+                  <a href="mailto:soniaforestieri@hotmail.it" className="text-gray-600 hover:text-amber-600 transition-colors text-lg break-all">
                     soniaforestieri@hotmail.it
                   </a>
                   <p className="text-sm text-gray-500 mt-2">Scrivici per informazioni</p>
@@ -72,14 +75,14 @@ export default function ContactSection() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="bg-rose-100 rounded-full p-4 flex-shrink-0">
-                  <Clock className="h-7 w-7 text-rose-500" />
+                <div className="bg-amber-100 rounded-full p-4 flex-shrink-0">
+                  <Clock className="h-7 w-7 text-amber-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800 text-xl mb-2">Orari di Apertura</h3>
                   <div className="text-gray-600 space-y-1 text-lg">
                     <p>Martedì - Sabato</p>
-                    <p className="font-semibold text-rose-600">9:00 - 18:00</p>
+                    <p className="font-semibold text-amber-600">9:00 - 18:00</p>
                     <p className="text-sm text-gray-500 mt-2">Domenica e Lunedì: Chiuso</p>
                   </div>
                 </div>
@@ -103,7 +106,7 @@ export default function ContactSection() {
               </a>
               <a 
                 href={`tel:${phoneNumber}`}
-                className="flex items-center justify-center gap-3 bg-rose-500 text-white px-8 py-4 rounded-full hover:bg-rose-600 transition-all transform hover:scale-105 text-lg font-medium shadow-md w-full sm:w-auto"
+                className="flex items-center justify-center gap-3 bg-amber-600 text-white px-8 py-4 rounded-full hover:bg-amber-700 transition-all transform hover:scale-105 text-lg font-medium shadow-md w-full sm:w-auto"
               >
                 <Phone className="h-6 w-6" />
                 Chiamaci Ora
@@ -117,7 +120,7 @@ export default function ContactSection() {
                   href="https://www.instagram.com/soniaforestieri" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gradient-to-br from-purple-500 to-pink-500 text-white p-4 rounded-full hover:shadow-lg transition-all transform hover:scale-110"
+                  className="bg-gradient-to-br from-amber-500 to-orange-500 text-white p-4 rounded-full hover:shadow-lg transition-all transform hover:scale-110"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-6 w-6" />
