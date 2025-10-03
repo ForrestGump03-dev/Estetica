@@ -15769,7 +15769,7 @@ function Services() {
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-4", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-semibold text-gray-800 mb-2", children: "Benefici" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-1", children: service.benefits.map((benefit, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "text-gray-600 text-sm flex items-start gap-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-rose-500 mt-1", children: "•" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-rose-500 leading-normal", children: "•" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: benefit })
           ] }, idx)) })
         ] }),
