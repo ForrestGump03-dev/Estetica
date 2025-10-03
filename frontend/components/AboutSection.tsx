@@ -8,28 +8,24 @@ export default function AboutSection() {
           {/* Content */}
           <div>
             <h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-6">
-              Chi Siamo
+              Chi Sono
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Estetica Bellezza è il tuo rifugio di tranquillità nel cuore della città. 
-              Da oltre 15 anni ci dedichiamo con passione alla cura della bellezza e del benessere, 
-              offrendo trattamenti personalizzati in un ambiente elegante e rilassante.
+              Sonia Forestieri è un'estetista professionista nel settore della bellezza e del benessere. La sua dedizione e competenza
+              garantiscono trattamenti personalizzati di alta qualità in un ambiente 
+              accogliente e rilassante.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Il nostro team di professioniste qualificate utilizza solo prodotti di alta qualità 
-              e tecnologie all'avanguardia per garantire risultati eccellenti e un'esperienza 
-              indimenticabile.
+              Utilizzando prodotti selezionati e tecniche all'avanguardia, Sonia si prende 
+              cura di ogni cliente con attenzione e professionalità, offrendo risultati 
+              visibili e duraturi.
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-rose-500 mb-2">15+</div>
-                <div className="text-gray-600">Anni di Esperienza</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-rose-500 mb-2">5000+</div>
-                <div className="text-gray-600">Clienti Soddisfatte</div>
+            <div className="flex justify-center lg:justify-start">
+              <div className="text-center bg-white rounded-2xl shadow-lg px-8 py-6">
+                <div className="text-4xl font-bold text-rose-500 mb-2">20+</div>
+                <div className="text-gray-600 font-medium">Anni di Esperienza</div>
               </div>
             </div>
           </div>
@@ -41,8 +37,8 @@ export default function AboutSection() {
                 <Award className="h-6 w-6 text-rose-500" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Professionali Certificati</h3>
-                <p className="text-gray-600">Estetiste qualificate con formazione continua sulle ultime tecniche</p>
+                <h3 className="font-semibold text-gray-800 mb-2">Esperienza Certificata</h3>
+                <p className="text-gray-600">Formazione professionale e aggiornamento continuo sulle tecniche più moderne</p>
               </div>
             </div>
 
@@ -51,8 +47,8 @@ export default function AboutSection() {
                 <Users className="h-6 w-6 text-rose-500" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Approccio Personalizzato</h3>
-                <p className="text-gray-600">Ogni trattamento è studiato su misura per le tue esigenze specifiche</p>
+                <h3 className="font-semibold text-gray-800 mb-2">Attenzione Personalizzata</h3>
+                <p className="text-gray-600">Ogni trattamento è studiato su misura in base alle esigenze individuali</p>
               </div>
             </div>
 
@@ -62,7 +58,7 @@ export default function AboutSection() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2">Orari Flessibili</h3>
-                <p className="text-gray-600">Aperti anche la sera per adattarci ai tuoi impegni</p>
+                <p className="text-gray-600">Disponibilità anche serale per adattarsi alle diverse esigenze</p>
               </div>
             </div>
 
@@ -71,8 +67,8 @@ export default function AboutSection() {
                 <Heart className="h-6 w-6 text-rose-500" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Ambiente Rilassante</h3>
-                <p className="text-gray-600">Spazi progettati per il massimo comfort e relax</p>
+                <h3 className="font-semibold text-gray-800 mb-2">Ambiente Curato</h3>
+                <p className="text-gray-600">Spazio accogliente pensato per garantire comfort e relax</p>
               </div>
             </div>
           </div>

@@ -1,26 +1,60 @@
 import { Sparkles, Clock, Users, Award } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
-const services = [
+interface Service {
+  name: string
+  description: string
+  purpose: string
+  benefits: string[]
+  duration: string
+  invasive: boolean
+  sessions?: string
+}
+
+interface ServiceCategory {
+  category: string
+  items: Service[]
+}
+
+const services: ServiceCategory[] = [
   {
     category: "Trattamenti Viso",
     items: [
       {
         name: "Pulizia del Viso Profonda",
-        description: "Trattamento completo per rimuovere impurità e rigenerare la pelle del viso.",
-        duration: "60 min",
-        price: "€ 70"
+        description: "Trattamento completo che rimuove impurità, punti neri e cellule morte, lasciando la pelle fresca e luminosa.",
+        purpose: "Purificare e ossigenare la pelle del viso",
+        benefits: [
+          "Rimozione di impurità e tossine",
+          "Pelle più luminosa e levigata",
+          "Pori visibilmente ridotti"
+        ],
+        duration: "60 minuti",
+        invasive: false
       },
       {
         name: "Trattamento Anti-Age",
-        description: "Terapia avanzata per contrastare i segni del tempo e mantenere la pelle giovane.",
-        duration: "75 min",
-        price: "€ 120"
+        description: "Terapia avanzata che combina tecniche e prodotti specifici per contrastare i segni dell'invecchiamento cutaneo.",
+        purpose: "Ridurre rughe e linee d'espressione",
+        benefits: [
+          "Riduzione visibile delle rughe",
+          "Miglioramento dell'elasticità cutanea",
+          "Pelle più tonica e compatta"
+        ],
+        duration: "75 minuti",
+        invasive: false
       },
       {
         name: "Idratazione Intensiva",
-        description: "Maschera nutriente e idratante per tutti i tipi di pelle.",
-        duration: "45 min",
-        price: "€ 60"
+        description: "Trattamento nutriente con maschere specifiche per restituire idratazione profonda alla pelle disidratata.",
+        purpose: "Ripristinare l'equilibrio idrolipidico della pelle",
+        benefits: [
+          "Idratazione profonda e duratura",
+          "Pelle morbida e vellutata",
+          "Riduzione della secchezza cutanea"
+        ],
+        duration: "45 minuti",
+        invasive: false
       }
     ]
   },
@@ -29,21 +63,39 @@ const services = [
     items: [
       {
         name: "Massaggio Rilassante",
-        description: "Massaggio completo del corpo per alleviare stress e tensioni muscolari.",
-        duration: "60 min",
-        price: "€ 80"
+        description: "Massaggio completo del corpo con tecniche manuali che favoriscono il rilassamento muscolare e mentale.",
+        purpose: "Alleviare stress e tensioni muscolari",
+        benefits: [
+          "Riduzione dello stress e dell'ansia",
+          "Miglioramento della circolazione",
+          "Rilassamento profondo di corpo e mente"
+        ],
+        duration: "60 minuti",
+        invasive: false
       },
       {
         name: "Trattamento Anticellulite",
-        description: "Programma specifico per contrastare gli inestetismi della cellulite.",
-        duration: "90 min",
-        price: "€ 150"
+        description: "Programma mirato che combina tecniche manuali e tecnologie specifiche per contrastare gli inestetismi della cellulite.",
+        purpose: "Ridurre l'aspetto della cellulite e migliorare la texture cutanea",
+        benefits: [
+          "Riduzione visibile della cellulite",
+          "Miglioramento del microcircolo",
+          "Pelle più tonica e liscia"
+        ],
+        duration: "90 minuti",
+        invasive: false
       },
       {
         name: "Scrub Corpo",
-        description: "Esfoliazione dolce per una pelle morbida e levigata.",
-        duration: "30 min",
-        price: "€ 50"
+        description: "Esfoliazione delicata del corpo con prodotti naturali per rimuovere le cellule morte e rinnovare la pelle.",
+        purpose: "Esfoliare e levigare la pelle del corpo",
+        benefits: [
+          "Rimozione delle cellule morte",
+          "Pelle più morbida e luminosa",
+          "Migliore assorbimento dei prodotti"
+        ],
+        duration: "30 minuti",
+        invasive: false
       }
     ]
   },
@@ -52,22 +104,40 @@ const services = [
     items: [
       {
         name: "Radiofrequenza",
-        description: "Tecnologia avanzata per il ringiovanimento e il rassodamento della pelle.",
-        duration: "45 min",
-        price: "€ 100"
+        description: "Tecnologia avanzata che utilizza onde elettromagnetiche per stimolare la produzione di collagene e rassodare i tessuti.",
+        purpose: "Rassodare la pelle e contrastare il rilassamento cutaneo",
+        benefits: [
+          "Stimolazione del collagene",
+          "Effetto lifting naturale",
+          "Pelle più tonica e compatta"
+        ],
+        duration: "45 minuti",
+        invasive: false
       },
       {
         name: "Cavitazione",
-        description: "Trattamento non invasivo per la riduzione del grasso localizzato.",
-        duration: "50 min",
-        price: "€ 90"
+        description: "Trattamento non invasivo che utilizza ultrasuoni per ridurre gli accumuli adiposi localizzati.",
+        purpose: "Ridurre il grasso localizzato",
+        benefits: [
+          "Riduzione del grasso localizzato",
+          "Miglioramento dei contorni corporei",
+          "Trattamento non invasivo e indolore"
+        ],
+        duration: "50 minuti",
+        invasive: false
       },
       {
         name: "Linfodrenaggio",
-        description: "Massaggio specializzato per favorire il drenaggio linfatico.",
-        duration: "60 min",
-        price: "€ 85"
-      }
+        description: "Massaggio specializzato che favorisce il drenaggio dei liquidi in eccesso e stimola il sistema linfatico.",
+        purpose: "Favorire il drenaggio linfatico e ridurre i gonfiori",
+        benefits: [
+          "Riduzione di gonfiori e ritenzione idrica",
+          "Miglioramento della circolazione",
+          "Sensazione di leggerezza"
+        ],
+        duration: "60 minuti",
+        invasive: false
+      },
     ]
   },
   {
@@ -75,21 +145,39 @@ const services = [
     items: [
       {
         name: "Manicure Completa",
-        description: "Cura completa delle unghie e delle mani con smalto a scelta.",
-        duration: "45 min",
-        price: "€ 35"
+        description: "Cura completa delle unghie e delle mani con limatura, rimozione cuticole e applicazione smalto.",
+        purpose: "Curare e abbellire unghie e mani",
+        benefits: [
+          "Unghie curate e ben sagomate",
+          "Mani morbide e idratate",
+          "Finitura impeccabile"
+        ],
+        duration: "45 minuti",
+        invasive: false
       },
       {
         name: "Manicure Semipermanente",
-        description: "Applicazione di smalto gel di lunga durata.",
-        duration: "60 min",
-        price: "€ 45"
+        description: "Applicazione di smalto gel di lunga durata che garantisce una manicure perfetta per settimane.",
+        purpose: "Ottenere una manicure resistente e duratura",
+        benefits: [
+          "Durata fino a 3 settimane",
+          "Unghie sempre perfette",
+          "Colori brillanti e lucidi"
+        ],
+        duration: "60 minuti",
+        invasive: false
       },
       {
         name: "Ricostruzione Unghie",
-        description: "Allungamento e modellazione delle unghie con gel o acrilico.",
-        duration: "120 min",
-        price: "€ 70"
+        description: "Allungamento e modellazione delle unghie con gel o acrilico per unghie perfette e personalizzate.",
+        purpose: "Allungare e modellare le unghie",
+        benefits: [
+          "Unghie lunghe e resistenti",
+          "Forma personalizzata",
+          "Risultato duraturo"
+        ],
+        duration: "2 ore",
+        invasive: false
       }
     ]
   }
@@ -124,24 +212,55 @@ export default function Services() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.items.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-rose-100">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                      <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                         {service.name}
                       </h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed">
+                      
+                      {/* Descrizione */}
+                      <p className="text-gray-700 mb-4 leading-relaxed">
                         {service.description}
                       </p>
-                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                        <div className="flex items-center gap-2">
-                          <Clock className="h-4 w-4" />
+                      
+                      {/* A cosa serve */}
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-gray-800 mb-2">A cosa serve?</h4>
+                        <p className="text-gray-600 text-sm">{service.purpose}</p>
+                      </div>
+                      
+                      {/* Benefici */}
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-gray-800 mb-2">Benefici</h4>
+                        <ul className="space-y-1">
+                          {service.benefits.map((benefit, idx) => (
+                            <li key={idx} className="text-gray-600 text-sm flex items-start gap-2">
+                              <span className="text-rose-500 mt-1">•</span>
+                              <span>{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      {/* Durata */}
+                      <div className="mb-6 pt-4 border-t border-gray-200">
+                        <div className="flex items-center gap-2 text-gray-700 mb-2">
+                          <Clock className="h-4 w-4 text-rose-500" />
+                          <span className="font-semibold">DURATA:</span>
                           <span>{service.duration}</span>
                         </div>
-                        <div className="text-rose-600 font-semibold text-lg">
-                          {service.price}
-                        </div>
+                        {service.sessions && (
+                          <div className="text-gray-700">
+                            <span className="font-semibold">SEDUTE:</span>
+                            <span className="ml-2">{service.sessions}</span>
+                          </div>
+                        )}
                       </div>
-                      <button className="w-full bg-rose-500 text-white py-3 rounded-full hover:bg-rose-600 transition-colors">
+                      
+                      <a 
+                        href="/#contatti"
+                        className="block w-full bg-rose-500 text-white py-3 rounded-full hover:bg-rose-600 transition-colors text-center font-medium"
+                      >
                         Prenota Ora
-                      </button>
+                      </a>
                     </div>
                   ))}
                 </div>
@@ -159,27 +278,27 @@ export default function Services() {
               <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Award className="h-8 w-8 text-rose-500" />
               </div>
-              <h3 className="font-semibold text-gray-800 mb-2">Professionali Qualificati</h3>
+              <h3 className="font-semibold text-gray-800 mb-2">Esperienza Certificata</h3>
               <p className="text-gray-600">
-                Il nostro team è formato da estetiste certificate con anni di esperienza
+                Oltre 20 anni di esperienza nel settore dell'estetica professionale
               </p>
             </div>
             <div className="text-center">
               <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Sparkles className="h-8 w-8 text-rose-500" />
               </div>
-              <h3 className="font-semibold text-gray-800 mb-2">Tecnologie Avanzate</h3>
+              <h3 className="font-semibold text-gray-800 mb-2">Tecnologie Moderne</h3>
               <p className="text-gray-600">
-                Utilizziamo le tecnologie più innovative per risultati ottimali
+                Utilizzo di prodotti di qualità e tecniche all'avanguardia
               </p>
             </div>
             <div className="text-center">
               <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Users className="h-8 w-8 text-rose-500" />
               </div>
-              <h3 className="font-semibold text-gray-800 mb-2">Esperienza Personalizzata</h3>
+              <h3 className="font-semibold text-gray-800 mb-2">Attenzione Personalizzata</h3>
               <p className="text-gray-600">
-                Ogni trattamento è studiato su misura per le tue esigenze specifiche
+                Ogni trattamento è studiato su misura in base alle esigenze individuali
               </p>
             </div>
           </div>

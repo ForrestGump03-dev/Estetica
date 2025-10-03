@@ -2,6 +2,14 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function HeroSection() {
+  const handleScrollToContacts = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const element = document.querySelector('#contatti')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
@@ -23,7 +31,7 @@ export default function HeroSection() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto">
-            Scopri un'oasi di tranquillità dove prendersi cura di sé diventa un'esperienza unica e rigenerante
+            Trattamenti estetici professionali per prendersi cura di sé con qualità ed eleganza
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -35,7 +43,8 @@ export default function HeroSection() {
               <ArrowRight className="h-5 w-5" />
             </Link>
             <a 
-              href="#contatti" 
+              href="#contatti"
+              onClick={handleScrollToContacts}
               className="border-2 border-rose-300 text-rose-600 px-8 py-4 rounded-full hover:bg-rose-50 transition-colors text-lg font-medium"
             >
               Prenota Ora

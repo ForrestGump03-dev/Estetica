@@ -12,9 +12,12 @@ export default function Header() {
     <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 text-2xl font-elegant text-rose-700">
-            <Sparkles className="h-8 w-8" />
-            <span className="font-serif">Estetica Bellezza</span>
+          <Link to="/" className="flex items-center gap-3 text-2xl font-elegant text-rose-700">
+            {/* Logo placeholder - Aggiungi qui il tuo logo */}
+            <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-rose-600 rounded-full flex items-center justify-center shadow-md">
+              <span className="text-white font-serif text-xl font-bold">SF</span>
+            </div>
+            <span className="font-serif">Sonia Forestieri</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -36,7 +39,7 @@ export default function Header() {
               Servizi
             </Link>
             <a 
-              href="#contatti" 
+              href="/#contatti" 
               className="bg-rose-500 text-white px-6 py-2 rounded-full hover:bg-rose-600 transition-colors"
             >
               Contatti
@@ -75,7 +78,7 @@ export default function Header() {
                 Servizi
               </Link>
               <a 
-                href="#contatti" 
+                href="/#contatti" 
                 className="bg-rose-500 text-white px-6 py-2 rounded-full hover:bg-rose-600 transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
