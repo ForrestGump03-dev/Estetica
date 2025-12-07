@@ -5,27 +5,27 @@ import { ChevronLeft, ChevronRight, Camera } from 'lucide-react'
 const beforeAfterImages = [
   {
     id: 1,
-    title: "Trattamento Anti-Age",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
+    title: "Trucco Cromatico Labbra",
+    before: "/trucco_cromatico_prima.jpg",
+    after: "/trucco_cromatico_dopo.jpg"
   },
   {
     id: 2,
-    title: "Pulizia del Viso Profonda",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
+    title: "Radiofrequenza Viso",
+    before: "/Radiofrequenza_prima.jpg",
+    after: "/Radiofrequenza_dopo.jpg"
   },
   {
     id: 3,
-    title: "Trattamento Anticellulite",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
+    title: "Allungamento Unghia Gel",
+    before: "/allungamento_unghia_prima.jpg",
+    after: "/allungamento_unghia_dopo.jpg"
   },
   {
     id: 4,
-    title: "Radiofrequenza Viso",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
+    title: "Trucco Cromatico Sopracciglia",
+    before: "/Cromatico_sopracciglia_prima.jpg",
+    after: "/Cromatico_sopracciglia_dopo.jpg"
   }
 ]
 
@@ -67,7 +67,7 @@ export default function BeforeAfterSection() {
                 <div className="bg-white rounded-2xl p-4 shadow-lg">
                   <div className="relative overflow-hidden rounded-xl">
                     <img 
-                      src="/prima-placeholder.jpg" 
+                      src={currentImage.before} 
                       alt="Prima del trattamento"
                       className="w-full h-64 object-cover"
                       onError={(e) => {
@@ -87,7 +87,7 @@ export default function BeforeAfterSection() {
                 <div className="bg-white rounded-2xl p-4 shadow-lg">
                   <div className="relative overflow-hidden rounded-xl">
                     <img 
-                      src="/dopo-placeholder.jpg" 
+                      src={currentImage.after} 
                       alt="Dopo il trattamento"
                       className="w-full h-64 object-cover"
                       onError={(e) => {

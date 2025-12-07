@@ -1,7 +1,7 @@
 import { MapPin, Phone, Mail, Clock, MessageCircle, Instagram, Facebook } from 'lucide-react'
 
 export default function ContactSection() {
-  const phoneNumber = "+390913824716"
+  const phoneNumber = "+393922281816"
   const whatsappNumber = "+393922281816"
   const whatsappMessage = "Ciao! Vorrei prenotare un appuntamento."
 
@@ -33,7 +33,7 @@ export default function ContactSection() {
                     className="text-gray-600 hover:text-amber-600 transition-colors text-lg"
                   >
                     Via Titina De Filippo 36<br />
-                    90129 Palermo
+                    90135 Palermo
                   </a>
                   <p className="text-sm text-gray-500 mt-2">Clicca per aprire in Google Maps</p>
                 </div>
@@ -51,7 +51,7 @@ export default function ContactSection() {
                     href={`tel:${phoneNumber}`} 
                     className="text-gray-600 hover:text-amber-600 transition-colors text-lg block"
                   >
-                    091 382 4716
+                    392 228 1816
                   </a>
                   <p className="text-sm text-gray-500 mt-2">Chiamaci per prenotazioni</p>
                 </div>
@@ -83,6 +83,8 @@ export default function ContactSection() {
                   <div className="text-gray-600 space-y-1 text-lg">
                     <p>Martedì - Sabato</p>
                     <p className="font-semibold text-amber-600">9:00 - 18:00</p>
+                    <p>Mercoledì</p>
+                    <p className="font-semibold text-amber-600">14:00 - 22:00</p>
                     <p className="text-sm text-gray-500 mt-2">Domenica e Lunedì: Chiuso</p>
                   </div>
                 </div>

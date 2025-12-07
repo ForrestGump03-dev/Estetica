@@ -15109,14 +15109,14 @@ function Footer() {
                 children: [
                   "Via Titina De Filippo 36",
                   /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-                  "90129 Palermo"
+                  "90135 Palermo"
                 ]
               }
             )
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-gray-600", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-4 w-4" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:+390913824716", className: "hover:text-rose-600 transition-colors", children: "091 382 4716" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:+393922281816", className: "hover:text-rose-600 transition-colors", children: " 392 228 1816" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-gray-600", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-4 w-4" }),
@@ -15465,7 +15465,7 @@ function ReviewsSection() {
   ] }) });
 }
 function ContactSection() {
-  const phoneNumber = "+390913824716";
+  const phoneNumber = "+393922281816";
   const whatsappNumber = "+393922281816";
   const whatsappMessage = "Ciao! Vorrei prenotare un appuntamento.";
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "contatti", className: "py-20 bg-gradient-to-br from-rose-50 to-amber-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
@@ -15489,7 +15489,7 @@ function ContactSection() {
                 children: [
                   "Via Titina De Filippo 36",
                   /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-                  "90129 Palermo"
+                  "90135 Palermo"
                 ]
               }
             ),
@@ -15500,7 +15500,7 @@ function ContactSection() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-rose-100 rounded-full p-4 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-7 w-7 text-rose-500" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 text-xl mb-2", children: "Telefono" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: `tel:${phoneNumber}`, className: "text-gray-600 hover:text-rose-500 transition-colors text-lg block", children: "091 382 4716" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: `tel:${phoneNumber}`, className: "text-gray-600 hover:text-rose-500 transition-colors text-lg block", children: "392 228 1816" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-500 mt-2", children: "Chiamaci per prenotazioni" })
           ] })
         ] }) }),

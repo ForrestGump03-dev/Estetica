@@ -40,12 +40,12 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-amber-600 transition-colors"
                 >
-                  Via Titina De Filippo 36<br />90129 Palermo
+                  Via Titina De Filippo 36<br />90135 Palermo
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-600">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+390913824716" className="hover:text-amber-600 transition-colors">091 382 4716</a>
+                <a href="tel:+393922281816" className="hover:text-amber-600 transition-colors">392 228 1816</a>
               </div>
               <div className="flex items-center gap-3 text-gray-600">
                 <Mail className="h-4 w-4" />

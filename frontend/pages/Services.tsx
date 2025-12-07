@@ -115,13 +115,13 @@ const services: ServiceCategory[] = [
         invasive: false
       },
       {
-        name: "Cavitazione",
-        description: "Trattamento non invasivo che utilizza ultrasuoni per ridurre gli accumuli adiposi localizzati.",
-        purpose: "Ridurre il grasso localizzato",
+        name: "LipoLaser",
+        description: "Tecnologia laser a bassa intensità che agisce in modo mirato sulle cellule adipose, favorendo la riduzione dei centimetri e il rimodellamento della silhouette.",
+        purpose: "Scolpire il corpo e ridurre le adiposità localizzate",
         benefits: [
-          "Riduzione del grasso localizzato",
-          "Miglioramento dei contorni corporei",
-          "Trattamento non invasivo e indolore"
+          "Riduzione visibile della circonferenza",
+          "Rimodellamento della silhouette",
+          "Procedura sicura e senza tempi di recupero"
         ],
         duration: "50 minuti",
         invasive: false
@@ -136,6 +136,30 @@ const services: ServiceCategory[] = [
           "Sensazione di leggerezza"
         ],
         duration: "60 minuti",
+        invasive: false
+      },
+      {
+        name: "Epilazione Laser Definitiva",
+        description: "Trattamento progressivo permanente per la rimozione dei peli superflui tramite tecnologia laser di ultima generazione.",
+        purpose: "Eliminare progressivamente i peli superflui",
+        benefits: [
+          "Risultati permanenti",
+          "Pelle liscia e morbida",
+          "Efficace su diverse zone del corpo"
+        ],
+        duration: "Variabile in base alla zona",
+        invasive: false
+      },
+      {
+        name: "Trattamento a Ultrasuoni",
+        description: "Tecnologia che utilizza onde sonore ad alta frequenza per pulire in profondità e stimolare il rinnovamento cellulare.",
+        purpose: "Pulizia profonda e stimolazione cellulare",
+        benefits: [
+          "Pulizia profonda dei pori",
+          "Miglioramento della texture cutanea",
+          "Stimolazione della microcircolazione"
+        ],
+        duration: "50 minuti",
         invasive: false
       },
     ]
