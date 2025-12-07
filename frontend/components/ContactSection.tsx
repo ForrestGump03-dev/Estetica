@@ -127,6 +127,15 @@ export default function ContactSection() {
                 >
                   <Instagram className="h-6 w-6" />
                 </a>
+                <a 
+                  href="https://www.facebook.com/profile.php?id=100063692671459" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-br from-amber-500 to-orange-500 text-white p-4 rounded-full hover:shadow-lg transition-all transform hover:scale-110"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-6 w-6" />
+                </a>
               </div>
               <p className="text-center text-sm text-gray-500 mt-4">
                 Rimani aggiornata su novità e promozioni

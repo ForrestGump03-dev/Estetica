@@ -61,6 +61,15 @@ export default function Footer() {
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
+                <a 
+                  href="https://www.facebook.com/profile.php?id=100063692671459" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-amber-600 hover:text-amber-700 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
               </div>
             </div>
           </div>
