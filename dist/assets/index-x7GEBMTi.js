@@ -14721,11 +14721,28 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$j = [
+const __iconNode$k = [
   ["path", { d: "M5 12h14", key: "1ays0h" }],
   ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
 ];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$j);
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$k);
+/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$j = [
+  [
+    "path",
+    {
+      d: "m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526",
+      key: "1yiouv"
+    }
+  ],
+  ["circle", { cx: "12", cy: "8", r: "6", key: "1vp47v" }]
+];
+const Award = createLucideIcon("award", __iconNode$j);
 /**
  * @license lucide-react v0.484.0 - ISC
  *
@@ -14736,46 +14753,40 @@ const __iconNode$i = [
   [
     "path",
     {
-      d: "m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526",
-      key: "1yiouv"
-    }
-  ],
-  ["circle", { cx: "12", cy: "8", r: "6", key: "1vp47v" }]
-];
-const Award = createLucideIcon("award", __iconNode$i);
-/**
- * @license lucide-react v0.484.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$h = [
-  [
-    "path",
-    {
       d: "M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z",
       key: "1tc9qg"
     }
   ],
   ["circle", { cx: "12", cy: "13", r: "3", key: "1vg3eu" }]
 ];
-const Camera = createLucideIcon("camera", __iconNode$h);
+const Camera = createLucideIcon("camera", __iconNode$i);
 /**
  * @license lucide-react v0.484.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$g = [["path", { d: "m15 18-6-6 6-6", key: "1wnfg3" }]];
-const ChevronLeft = createLucideIcon("chevron-left", __iconNode$g);
+const __iconNode$h = [["path", { d: "m15 18-6-6 6-6", key: "1wnfg3" }]];
+const ChevronLeft = createLucideIcon("chevron-left", __iconNode$h);
 /**
  * @license lucide-react v0.484.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$f = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
-const ChevronRight = createLucideIcon("chevron-right", __iconNode$f);
+const __iconNode$g = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
+const ChevronRight = createLucideIcon("chevron-right", __iconNode$g);
+/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$f = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
+];
+const Clock = createLucideIcon("clock", __iconNode$f);
 /**
  * @license lucide-react v0.484.0 - ISC
  *
@@ -14783,10 +14794,12 @@ const ChevronRight = createLucideIcon("chevron-right", __iconNode$f);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$e = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
+  [
+    "path",
+    { d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z", key: "1jg4f8" }
+  ]
 ];
-const Clock = createLucideIcon("clock", __iconNode$e);
+const Facebook = createLucideIcon("facebook", __iconNode$e);
 /**
  * @license lucide-react v0.484.0 - ISC
  *
@@ -15006,8 +15019,8 @@ function Header() {
   const isActive = (path) => location.pathname === path;
   return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 py-4", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/", className: "flex items-center gap-3 text-2xl font-elegant text-rose-700", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-12 bg-gradient-to-br from-rose-400 to-rose-600 rounded-full flex items-center justify-center shadow-md", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-white font-serif text-xl font-bold", children: "SF" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/", className: "flex items-center gap-3 text-2xl font-elegant text-amber-800", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full flex items-center justify-center shadow-md", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-white font-serif text-xl font-bold", children: "SF" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-serif", children: "Sonia Forestieri" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden md:flex items-center gap-8", children: [
@@ -15015,7 +15028,7 @@ function Header() {
           Link,
           {
             to: "/",
-            className: `transition-colors hover:text-rose-600 ${isActive("/") ? "text-rose-600 font-medium" : "text-gray-700"}`,
+            className: `transition-colors hover:text-amber-700 ${isActive("/") ? "text-amber-700 font-medium" : "text-gray-700"}`,
             children: "Home"
           }
         ),
@@ -15023,7 +15036,7 @@ function Header() {
           Link,
           {
             to: "/servizi",
-            className: `transition-colors hover:text-rose-600 ${isActive("/servizi") ? "text-rose-600 font-medium" : "text-gray-700"}`,
+            className: `transition-colors hover:text-amber-700 ${isActive("/servizi") ? "text-amber-700 font-medium" : "text-gray-700"}`,
             children: "Servizi"
           }
         ),
@@ -15031,7 +15044,7 @@ function Header() {
           "a",
           {
             href: "/#contatti",
-            className: "bg-rose-500 text-white px-6 py-2 rounded-full hover:bg-rose-600 transition-colors",
+            className: "bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition-colors shadow-md",
             children: "Contatti"
           }
         )
@@ -15050,7 +15063,7 @@ function Header() {
         Link,
         {
           to: "/",
-          className: `transition-colors hover:text-rose-600 ${isActive("/") ? "text-rose-600 font-medium" : "text-gray-700"}`,
+          className: `transition-colors hover:text-amber-700 ${isActive("/") ? "text-amber-700 font-medium" : "text-gray-700"}`,
           onClick: () => setIsMenuOpen(false),
           children: "Home"
         }
@@ -15059,7 +15072,7 @@ function Header() {
         Link,
         {
           to: "/servizi",
-          className: `transition-colors hover:text-rose-600 ${isActive("/servizi") ? "text-rose-600 font-medium" : "text-gray-700"}`,
+          className: `transition-colors hover:text-amber-700 ${isActive("/servizi") ? "text-amber-700 font-medium" : "text-gray-700"}`,
           onClick: () => setIsMenuOpen(false),
           children: "Servizi"
         }
@@ -15068,7 +15081,7 @@ function Header() {
         "a",
         {
           href: "/#contatti",
-          className: "bg-rose-500 text-white px-6 py-2 rounded-full hover:bg-rose-600 transition-colors text-center",
+          className: "bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition-colors text-center shadow-md",
           onClick: () => setIsMenuOpen(false),
           children: "Contatti"
         }
@@ -15077,11 +15090,11 @@ function Header() {
   ] }) });
 }
 function Footer() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "bg-rose-100/50 border-t border-rose-200/50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 py-12", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "bg-amber-100/50 border-t border-amber-200/50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 py-12", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-8", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-2xl font-elegant text-rose-700 mb-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-8 h-8 bg-gradient-to-br from-rose-400 to-rose-600 rounded-full flex items-center justify-center shadow-md", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-white font-serif text-sm font-bold", children: "SF" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-2xl font-elegant text-amber-700 mb-4", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center shadow-md", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-white font-serif text-sm font-bold", children: "SF" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-serif", children: "Sonia Forestieri" })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 leading-relaxed", children: "Trattamenti estetici di qualità nel cuore di Palermo, per valorizzare la tua bellezza naturale." })
@@ -15089,9 +15102,9 @@ function Footer() {
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 mb-4", children: "Link Rapidi" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/", className: "block text-gray-600 hover:text-rose-600 transition-colors", children: "Home" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/servizi", className: "block text-gray-600 hover:text-rose-600 transition-colors", children: "Servizi" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#contatti", className: "block text-gray-600 hover:text-rose-600 transition-colors", children: "Contatti" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/", className: "block text-gray-600 hover:text-amber-600 transition-colors", children: "Home" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/servizi", className: "block text-gray-600 hover:text-amber-600 transition-colors", children: "Servizi" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#contatti", className: "block text-gray-600 hover:text-amber-600 transition-colors", children: "Contatti" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
@@ -15105,7 +15118,7 @@ function Footer() {
                 href: "https://maps.app.goo.gl/udGkG4NE4qyu2o359",
                 target: "_blank",
                 rel: "noopener noreferrer",
-                className: "hover:text-rose-600 transition-colors",
+                className: "hover:text-amber-600 transition-colors",
                 children: [
                   "Via Titina De Filippo 36",
                   /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -15116,27 +15129,53 @@ function Footer() {
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-gray-600", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-4 w-4" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:+393922281816", className: "hover:text-rose-600 transition-colors", children: " 392 228 1816" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:+393922281816", className: "hover:text-amber-600 transition-colors", children: "392 228 1816" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-gray-600", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-4 w-4" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:soniaforestieri@hotmail.it", className: "hover:text-rose-600 transition-colors break-all", children: "soniaforestieri@hotmail.it" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:soniaforestieri@hotmail.it", className: "hover:text-amber-600 transition-colors break-all", children: "soniaforestieri@hotmail.it" })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-4 mt-4", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "a",
-            {
-              href: "https://www.instagram.com/soniaforestieri",
-              target: "_blank",
-              rel: "noopener noreferrer",
-              className: "text-rose-500 hover:text-rose-600 transition-colors",
-              "aria-label": "Instagram",
-              children: /* @__PURE__ */ jsxRuntimeExports.jsx(Instagram, { className: "h-5 w-5" })
-            }
-          ) })
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-4 mt-4", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "a",
+              {
+                href: "https://www.instagram.com/soniaforestieri",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "text-amber-600 hover:text-amber-700 transition-colors",
+                "aria-label": "Instagram",
+                children: /* @__PURE__ */ jsxRuntimeExports.jsx(Instagram, { className: "h-5 w-5" })
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "a",
+              {
+                href: "https://www.facebook.com/profile.php?id=100063692671459",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "text-amber-600 hover:text-amber-700 transition-colors",
+                "aria-label": "Facebook",
+                children: /* @__PURE__ */ jsxRuntimeExports.jsx(Facebook, { className: "h-5 w-5" })
+              }
+            )
+          ] })
         ] })
       ] })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-t border-rose-200/50 mt-8 pt-8 text-center text-gray-600", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "© 2025 Sonia Forestieri - Estetica. Tutti i diritti riservati." }) })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-t border-amber-200/50 mt-8 pt-8 text-center text-gray-600", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
+      "Sito progettato e sviluppato da",
+      " ",
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "https://wa.me/393500082907",
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: "text-amber-600 hover:text-amber-700 transition-colors font-medium",
+          children: "Alessio Forestieri"
+        }
+      )
+    ] }) })
   ] }) });
 }
 function HeroSection() {
@@ -15148,16 +15187,16 @@ function HeroSection() {
     }
   };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative min-h-screen flex items-center justify-center overflow-hidden", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-rose-100 via-amber-50 to-pink-100" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-stone-200 via-amber-100 to-orange-100" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative z-10 container mx-auto px-4 text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-4 mb-8", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-0.5 bg-rose-300" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-8 w-8 text-rose-400" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-0.5 bg-rose-300" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-0.5 bg-amber-300" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-8 w-8 text-amber-500" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-0.5 bg-amber-300" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-5xl md:text-7xl font-serif text-gray-800 mb-6 leading-tight", children: [
         "Bellezza e",
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-rose-500 block", children: "Benessere" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-amber-700 block", children: "Benessere" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto", children: "Trattamenti estetici professionali per prendersi cura di sé con qualità ed eleganza" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center items-center", children: [
@@ -15165,7 +15204,7 @@ function HeroSection() {
           Link,
           {
             to: "/servizi",
-            className: "bg-rose-500 text-white px-8 py-4 rounded-full hover:bg-rose-600 transition-all transform hover:scale-105 flex items-center gap-2 text-lg font-medium",
+            className: "bg-amber-600 text-white px-8 py-4 rounded-full hover:bg-amber-700 transition-all transform hover:scale-105 flex items-center gap-2 text-lg font-medium shadow-lg",
             children: [
               "Scopri i Servizi",
               /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-5 w-5" })
@@ -15177,15 +15216,15 @@ function HeroSection() {
           {
             href: "#contatti",
             onClick: handleScrollToContacts,
-            className: "border-2 border-rose-300 text-rose-600 px-8 py-4 rounded-full hover:bg-rose-50 transition-colors text-lg font-medium",
+            className: "border-2 border-amber-400 text-amber-700 px-8 py-4 rounded-full hover:bg-amber-50 transition-colors text-lg font-medium",
             children: "Prenota Ora"
           }
         )
       ] })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-20 left-10 w-20 h-20 bg-rose-200/30 rounded-full blur-xl animate-pulse" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-20 right-10 w-32 h-32 bg-amber-200/30 rounded-full blur-xl animate-pulse delay-1000" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-1/2 left-1/4 w-16 h-16 bg-pink-200/30 rounded-full blur-xl animate-pulse delay-500" })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-20 left-10 w-20 h-20 bg-amber-200/30 rounded-full blur-xl animate-pulse" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-20 right-10 w-32 h-32 bg-orange-200/30 rounded-full blur-xl animate-pulse delay-1000" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-1/2 left-1/4 w-16 h-16 bg-stone-200/30 rounded-full blur-xl animate-pulse delay-500" })
   ] });
 }
 const services$1 = [
@@ -15216,8 +15255,8 @@ function ServicesSection() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl md:text-5xl font-serif text-gray-800 mb-6", children: "I Nostri Servizi" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-2xl mx-auto", children: "Una gamma completa di trattamenti professionali per la tua bellezza e il tuo benessere" })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12", children: services$1.map((service, index) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center group hover:transform hover:scale-105 transition-all duration-300", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-br from-rose-100 to-amber-100 rounded-2xl p-8 h-full", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsx(service.icon, { className: "h-8 w-8 text-rose-500" }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12", children: services$1.map((service, index) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center group hover:transform hover:scale-105 transition-all duration-300", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl p-8 h-full", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsx(service.icon, { className: "h-8 w-8 text-amber-600" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-gray-800 mb-4", children: service.title }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 leading-relaxed", children: service.description })
     ] }) }, index)) }),
@@ -15225,7 +15264,7 @@ function ServicesSection() {
       Link,
       {
         to: "/servizi",
-        className: "inline-flex items-center gap-2 bg-rose-500 text-white px-8 py-4 rounded-full hover:bg-rose-600 transition-colors text-lg font-medium",
+        className: "inline-flex items-center gap-2 bg-amber-600 text-white px-8 py-4 rounded-full hover:bg-amber-700 transition-colors text-lg font-medium shadow-lg",
         children: [
           "Vedi Tutti i Servizi",
           /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-5 w-5" })
@@ -15235,40 +15274,40 @@ function ServicesSection() {
   ] }) });
 }
 function AboutSection() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-gradient-to-br from-rose-50 to-amber-50", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-gradient-to-br from-stone-200 via-amber-100 to-orange-100", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl md:text-5xl font-serif text-gray-800 mb-6", children: "Chi Sono" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-gray-600 mb-8 leading-relaxed", children: "Sonia Forestieri è un'estetista professionista nel settore della bellezza e del benessere. La sua dedizione e competenza garantiscono trattamenti personalizzati di alta qualità in un ambiente accogliente e rilassante." }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-gray-600 mb-8 leading-relaxed", children: "Utilizzando prodotti selezionati e tecniche all'avanguardia, Sonia si prende cura di ogni cliente con attenzione e professionalità, offrendo risultati visibili e duraturi." }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center lg:justify-start", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center bg-white rounded-2xl shadow-lg px-8 py-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-4xl font-bold text-rose-500 mb-2", children: "20+" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-4xl font-bold text-amber-600 mb-2", children: "20+" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gray-600 font-medium", children: "Anni di Esperienza" })
       ] }) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-rose-100 rounded-full p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Award, { className: "h-6 w-6 text-rose-500" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-amber-100 rounded-full p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Award, { className: "h-6 w-6 text-amber-600" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 mb-2", children: "Esperienza Certificata" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600", children: "Formazione professionale e aggiornamento continuo sulle tecniche più moderne" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-rose-100 rounded-full p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "h-6 w-6 text-rose-500" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-amber-100 rounded-full p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "h-6 w-6 text-amber-600" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 mb-2", children: "Attenzione Personalizzata" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600", children: "Ogni trattamento è studiato su misura in base alle esigenze individuali" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-rose-100 rounded-full p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "h-6 w-6 text-rose-500" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-amber-100 rounded-full p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "h-6 w-6 text-amber-600" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 mb-2", children: "Orari Flessibili" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600", children: "Disponibilità anche serale per adattarsi alle diverse esigenze" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-rose-100 rounded-full p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Heart, { className: "h-6 w-6 text-rose-500" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-amber-100 rounded-full p-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Heart, { className: "h-6 w-6 text-amber-600" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 mb-2", children: "Ambiente Curato" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600", children: "Spazio accogliente pensato per garantire comfort e relax" })
@@ -15280,27 +15319,27 @@ function AboutSection() {
 const beforeAfterImages = [
   {
     id: 1,
-    title: "Trattamento Anti-Age",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
+    title: "Trucco Cromatico Labbra",
+    before: "/trucco_cromatico_prima.jpg",
+    after: "/trucco_cromatico_dopo.jpg"
   },
   {
     id: 2,
-    title: "Pulizia del Viso Profonda",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
+    title: "Radiofrequenza Viso",
+    before: "/Radiofrequenza_prima.jpg",
+    after: "/Radiofrequenza_dopo.jpg"
   },
   {
     id: 3,
-    title: "Trattamento Anticellulite",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
+    title: "Allungamento Unghia Gel",
+    before: "/allungamento_unghia_prima.jpg",
+    after: "/allungamento_unghia_dopo.jpg"
   },
   {
     id: 4,
-    title: "Radiofrequenza Viso",
-    before: "/api/placeholder/400/300",
-    after: "/api/placeholder/400/300"
+    title: "Trucco Cromatico Sopracciglia",
+    before: "/Cromatico_sopracciglia_prima.jpg",
+    after: "/Cromatico_sopracciglia_dopo.jpg"
   }
 ];
 function BeforeAfterSection() {
@@ -15322,13 +15361,13 @@ function BeforeAfterSection() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-2xl mx-auto", children: "Scopri i risultati sorprendenti dei nostri trattamenti attraverso le trasformazioni delle nostre clienti" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative bg-gradient-to-br from-rose-50 to-amber-50 rounded-3xl p-8 shadow-lg", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 shadow-lg", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8 items-center", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-2xl p-4 shadow-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative overflow-hidden rounded-xl", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "img",
               {
-                src: "/prima-placeholder.jpg",
+                src: currentImage.before,
                 alt: "Prima del trattamento",
                 className: "w-full h-64 object-cover",
                 onError: (e) => {
@@ -15343,7 +15382,7 @@ function BeforeAfterSection() {
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "img",
               {
-                src: "/dopo-placeholder.jpg",
+                src: currentImage.after,
                 alt: "Dopo il trattamento",
                 className: "w-full h-64 object-cover",
                 onError: (e) => {
@@ -15352,7 +15391,7 @@ function BeforeAfterSection() {
                 }
               }
             ),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-3 left-3 bg-rose-500 text-white px-3 py-1 rounded-full text-sm font-medium", children: "DOPO" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-3 left-3 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium", children: "DOPO" })
           ] }) }) })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold text-gray-800", children: currentImage.title }) }),
@@ -15377,13 +15416,13 @@ function BeforeAfterSection() {
         "button",
         {
           onClick: () => setCurrentIndex(index),
-          className: `w-3 h-3 rounded-full transition-all ${index === currentIndex ? "bg-rose-500" : "bg-gray-300"}`
+          className: `w-3 h-3 rounded-full transition-all ${index === currentIndex ? "bg-amber-600" : "bg-gray-300"}`
         },
         index
       )) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mt-8 bg-rose-50 rounded-xl p-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mt-8 bg-amber-50 rounded-xl p-6", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-2 mb-2", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Camera, { className: "h-5 w-5 text-rose-500" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Camera, { className: "h-5 w-5 text-amber-600" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-medium text-gray-800", children: "Risultati Reali" })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 text-sm", children: "Le immagini mostrano risultati reali ottenuti dalle nostre clienti. I risultati possono variare da persona a persona." })
@@ -15430,13 +15469,13 @@ const reviews = [
   }
 ];
 function ReviewsSection() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-gradient-to-br from-rose-50 to-amber-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-gradient-to-br from-amber-50 to-orange-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl md:text-5xl font-serif text-gray-800 mb-6", children: "Cosa Dicono le Nostre Clienti" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-2xl mx-auto", children: "La soddisfazione delle nostre clienti è la nostra priorità. Leggi le loro esperienze" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8", children: reviews.map((review, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow relative", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-6 right-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Quote, { className: "h-8 w-8 text-rose-200" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-6 right-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Quote, { className: "h-8 w-8 text-amber-200" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-1 mb-4", children: [...Array(review.rating)].map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "h-5 w-5 fill-yellow-400 text-yellow-400" }, i)) }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-gray-600 leading-relaxed mb-6 italic", children: [
         '"',
@@ -15445,7 +15484,7 @@ function ReviewsSection() {
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t pt-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-gray-800 mb-1", children: review.name }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-rose-500 font-medium", children: review.treatment })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-amber-600 font-medium", children: review.treatment })
       ] })
     ] }, index)) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mt-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white rounded-2xl p-8 shadow-lg inline-block", children: [
@@ -15468,7 +15507,7 @@ function ContactSection() {
   const phoneNumber = "+393922281816";
   const whatsappNumber = "+393922281816";
   const whatsappMessage = "Ciao! Vorrei prenotare un appuntamento.";
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "contatti", className: "py-20 bg-gradient-to-br from-rose-50 to-amber-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "contatti", className: "py-20 bg-gradient-to-br from-stone-200 via-amber-100 to-orange-100", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl md:text-5xl font-serif text-gray-800 mb-6", children: "Contattaci" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-2xl mx-auto", children: "Prenota il tuo appuntamento o contattaci per qualsiasi informazione" })
@@ -15476,7 +15515,7 @@ function ContactSection() {
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-5xl mx-auto", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6 mb-12", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-rose-100 rounded-full p-4 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "h-7 w-7 text-rose-500" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-amber-100 rounded-full p-4 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "h-7 w-7 text-amber-600" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 text-xl mb-2", children: "Dove Siamo" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -15485,7 +15524,7 @@ function ContactSection() {
                 href: "https://maps.app.goo.gl/udGkG4NE4qyu2o359",
                 target: "_blank",
                 rel: "noopener noreferrer",
-                className: "text-gray-600 hover:text-rose-500 transition-colors text-lg",
+                className: "text-gray-600 hover:text-amber-600 transition-colors text-lg",
                 children: [
                   "Via Titina De Filippo 36",
                   /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -15497,28 +15536,37 @@ function ContactSection() {
           ] })
         ] }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-rose-100 rounded-full p-4 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-7 w-7 text-rose-500" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-amber-100 rounded-full p-4 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-7 w-7 text-amber-600" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 text-xl mb-2", children: "Telefono" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: `tel:${phoneNumber}`, className: "text-gray-600 hover:text-rose-500 transition-colors text-lg block", children: "392 228 1816" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "a",
+              {
+                href: `tel:${phoneNumber}`,
+                className: "text-gray-600 hover:text-amber-600 transition-colors text-lg block",
+                children: "392 228 1816"
+              }
+            ),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-500 mt-2", children: "Chiamaci per prenotazioni" })
           ] })
         ] }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-rose-100 rounded-full p-4 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-7 w-7 text-rose-500" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-amber-100 rounded-full p-4 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-7 w-7 text-amber-600" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 text-xl mb-2", children: "Email" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:soniaforestieri@hotmail.it", className: "text-gray-600 hover:text-rose-500 transition-colors text-lg break-all", children: "soniaforestieri@hotmail.it" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:soniaforestieri@hotmail.it", className: "text-gray-600 hover:text-amber-600 transition-colors text-lg break-all", children: "soniaforestieri@hotmail.it" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-500 mt-2", children: "Scrivici per informazioni" })
           ] })
         ] }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-rose-100 rounded-full p-4 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "h-7 w-7 text-rose-500" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-amber-100 rounded-full p-4 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "h-7 w-7 text-amber-600" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 text-xl mb-2", children: "Orari di Apertura" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-gray-600 space-y-1 text-lg", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Martedì - Sabato" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-rose-600", children: "9:00 - 18:00" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-amber-600", children: "9:00 - 18:00" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Mercoledì" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-amber-600", children: "14:00 - 22:00" }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-500 mt-2", children: "Domenica e Lunedì: Chiuso" })
             ] })
           ] })
@@ -15544,7 +15592,7 @@ function ContactSection() {
             "a",
             {
               href: `tel:${phoneNumber}`,
-              className: "flex items-center justify-center gap-3 bg-rose-500 text-white px-8 py-4 rounded-full hover:bg-rose-600 transition-all transform hover:scale-105 text-lg font-medium shadow-md w-full sm:w-auto",
+              className: "flex items-center justify-center gap-3 bg-amber-600 text-white px-8 py-4 rounded-full hover:bg-amber-700 transition-all transform hover:scale-105 text-lg font-medium shadow-md w-full sm:w-auto",
               children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-6 w-6" }),
                 "Chiamaci Ora"
@@ -15554,17 +15602,30 @@ function ContactSection() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t border-gray-200 pt-6", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-center text-gray-600 mb-4", children: "Seguici sui social" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-4 justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "a",
-            {
-              href: "https://www.instagram.com/soniaforestieri",
-              target: "_blank",
-              rel: "noopener noreferrer",
-              className: "bg-gradient-to-br from-purple-500 to-pink-500 text-white p-4 rounded-full hover:shadow-lg transition-all transform hover:scale-110",
-              "aria-label": "Instagram",
-              children: /* @__PURE__ */ jsxRuntimeExports.jsx(Instagram, { className: "h-6 w-6" })
-            }
-          ) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-4 justify-center", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "a",
+              {
+                href: "https://www.instagram.com/soniaforestieri",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "bg-gradient-to-br from-amber-500 to-orange-500 text-white p-4 rounded-full hover:shadow-lg transition-all transform hover:scale-110",
+                "aria-label": "Instagram",
+                children: /* @__PURE__ */ jsxRuntimeExports.jsx(Instagram, { className: "h-6 w-6" })
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "a",
+              {
+                href: "https://www.facebook.com/profile.php?id=100063692671459",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "bg-gradient-to-br from-amber-500 to-orange-500 text-white p-4 rounded-full hover:shadow-lg transition-all transform hover:scale-110",
+                "aria-label": "Facebook",
+                children: /* @__PURE__ */ jsxRuntimeExports.jsx(Facebook, { className: "h-6 w-6" })
+              }
+            )
+          ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-center text-sm text-gray-500 mt-4", children: "Rimani aggiornata su novità e promozioni" })
         ] })
       ] })
@@ -15680,13 +15741,13 @@ const services = [
         invasive: false
       },
       {
-        name: "Cavitazione",
-        description: "Trattamento non invasivo che utilizza ultrasuoni per ridurre gli accumuli adiposi localizzati.",
-        purpose: "Ridurre il grasso localizzato",
+        name: "LipoLaser",
+        description: "Tecnologia laser a bassa intensità che agisce in modo mirato sulle cellule adipose, favorendo la riduzione dei centimetri e il rimodellamento della silhouette.",
+        purpose: "Scolpire il corpo e ridurre le adiposità localizzate",
         benefits: [
-          "Riduzione del grasso localizzato",
-          "Miglioramento dei contorni corporei",
-          "Trattamento non invasivo e indolore"
+          "Riduzione visibile della circonferenza",
+          "Rimodellamento della silhouette",
+          "Procedura sicura e senza tempi di recupero"
         ],
         duration: "50 minuti",
         invasive: false
@@ -15701,6 +15762,30 @@ const services = [
           "Sensazione di leggerezza"
         ],
         duration: "60 minuti",
+        invasive: false
+      },
+      {
+        name: "Epilazione Laser Definitiva",
+        description: "Trattamento progressivo permanente per la rimozione dei peli superflui tramite tecnologia laser di ultima generazione.",
+        purpose: "Eliminare progressivamente i peli superflui",
+        benefits: [
+          "Risultati permanenti",
+          "Pelle liscia e morbida",
+          "Efficace su diverse zone del corpo"
+        ],
+        duration: "Variabile in base alla zona",
+        invasive: false
+      },
+      {
+        name: "Trattamento a Ultrasuoni",
+        description: "Tecnologia che utilizza onde sonore ad alta frequenza per pulire in profondità e stimolare il rinnovamento cellulare.",
+        purpose: "Pulizia profonda e stimolazione cellulare",
+        benefits: [
+          "Pulizia profonda dei pori",
+          "Miglioramento della texture cutanea",
+          "Stimolazione della microcircolazione"
+        ],
+        duration: "50 minuti",
         invasive: false
       }
     ]
@@ -15749,17 +15834,17 @@ const services = [
 ];
 function Services() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-gradient-to-r from-rose-100 to-amber-100 py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 text-center", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-gradient-to-r from-amber-100 to-orange-100 py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 text-center", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-3 mb-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-8 w-8 text-rose-500" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-8 w-8 text-amber-600" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl md:text-6xl font-serif text-gray-800", children: "I Nostri Servizi" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-8 w-8 text-rose-500" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-8 w-8 text-amber-600" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-2xl mx-auto", children: "Scopri la nostra gamma completa di trattamenti professionali per la cura del corpo e del viso" })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-16", children: services.map((category, categoryIndex) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-serif text-gray-800 text-center mb-12", children: category.category }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8", children: category.items.map((service, serviceIndex) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-rose-100", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8", children: category.items.map((service, serviceIndex) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-amber-200", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold text-gray-800 mb-4", children: service.name }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-700 mb-4 leading-relaxed", children: service.description }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-4", children: [
@@ -15769,13 +15854,13 @@ function Services() {
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-4", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-semibold text-gray-800 mb-2", children: "Benefici" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-1", children: service.benefits.map((benefit, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "text-gray-600 text-sm flex items-start gap-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-rose-500 leading-normal", children: "•" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-amber-600 leading-normal", children: "•" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: benefit })
           ] }, idx)) })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6 pt-4 border-t border-gray-200", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-gray-700 mb-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "h-4 w-4 text-rose-500" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "h-4 w-4 text-amber-600" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold", children: "DURATA:" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: service.duration })
           ] }),
@@ -15788,25 +15873,25 @@ function Services() {
           "a",
           {
             href: "/#contatti",
-            className: "block w-full bg-rose-500 text-white py-3 rounded-full hover:bg-rose-600 transition-colors text-center font-medium",
+            className: "block w-full bg-amber-600 text-white py-3 rounded-full hover:bg-amber-700 transition-colors text-center font-medium shadow-md",
             children: "Prenota Ora"
           }
         )
       ] }, serviceIndex)) })
     ] }, categoryIndex)) }) }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-rose-50/50 py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-8", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-amber-50/50 py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-8", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Award, { className: "h-8 w-8 text-rose-500" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Award, { className: "h-8 w-8 text-amber-600" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 mb-2", children: "Esperienza Certificata" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600", children: "Oltre 20 anni di esperienza nel settore dell'estetica professionale" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-8 w-8 text-rose-500" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-8 w-8 text-amber-600" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 mb-2", children: "Tecnologie Moderne" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600", children: "Utilizzo di prodotti di qualità e tecniche all'avanguardia" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "h-8 w-8 text-rose-500" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "h-8 w-8 text-amber-600" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-semibold text-gray-800 mb-2", children: "Attenzione Personalizzata" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600", children: "Ogni trattamento è studiato su misura in base alle esigenze individuali" })
       ] })
@@ -15832,7 +15917,7 @@ function ScrollToAnchor() {
 function App() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "dark", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(BrowserRouter, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollToAnchor, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-gradient-to-br from-rose-50 to-amber-50", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-gradient-to-br from-stone-200 via-amber-100 to-orange-100", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx("main", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Home, {}) }),

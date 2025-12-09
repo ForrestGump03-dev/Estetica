@@ -39,6 +39,12 @@ export default function Header() {
               Servizi
             </Link>
             <a 
+              href="/#novita" 
+              className="text-gray-700 hover:text-amber-700 transition-colors"
+            >
+              Novità
+            </a>
+            <a 
               href="/#contatti" 
               className="bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition-colors shadow-md"
             >
@@ -77,6 +83,13 @@ export default function Header() {
               >
                 Servizi
               </Link>
+              <a 
+                href="/#novita" 
+                className="text-gray-700 hover:text-amber-700 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Novità
+              </a>
               <a 
                 href="/#contatti" 
                 className="bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition-colors text-center shadow-md"

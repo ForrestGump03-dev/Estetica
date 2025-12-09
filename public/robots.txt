@@ -1,0 +1,13 @@
+# robots.txt per Sonia Forestieri - Estetica
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://soniaforestieri.it/sitemap.xml
+
+# Blocca directory non necessarie
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.ts$
+Disallow: /*.tsx$
