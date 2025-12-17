@@ -4,13 +4,13 @@ const reviews = [
   {
     name: "Maria R.",
     rating: 5,
-    text: "Un'esperienza fantastica! Lo staff è molto professionale e l'ambiente è rilassante. Il trattamento anti-age ha dato risultati incredibili. Tornerò sicuramente!",
+    text: "Un'esperienza fantastica! Sonia è molto professionale e l'ambiente è rilassante. Il trattamento anti-age ha dato risultati incredibili. Tornerò sicuramente!",
     treatment: "Trattamento Anti-Age"
   },
   {
     name: "Elena B.",
     rating: 5,
-    text: "Sono cliente da anni e non ho mai trovato un centro estetico migliore. La qualità dei servizi è eccellente e le ragazze sono sempre disponibili e gentili.",
+    text: "Sono cliente da anni e non ho mai trovato un centro estetico migliore. La qualità dei servizi è eccellente e Sonia è sempre disponibile e gentile.",
     treatment: "Pulizia del Viso"
   },
   {
@@ -34,7 +34,7 @@ const reviews = [
   {
     name: "Chiara B.",
     rating: 5,
-    text: "Un vero e proprio angolo di paradiso! Le estetiste sono competenti e l'ambiente è curato nei minimi dettagli. Lo consiglio a tutte le mie amiche.",
+    text: "Un vero e proprio angolo di paradiso! Sonia è super competente e l'ambiente è curato nei minimi dettagli. Lo consiglio a tutte le mie amiche.",
     treatment: "Idratazione Viso"
   }
 ]
