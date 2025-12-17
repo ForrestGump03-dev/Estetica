@@ -1,11 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, Suspense, lazy } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Home from './pages/Home'
-import Services from './pages/Services'
-import PrivacyPolicy from './pages/PrivacyPolicy'
 import WhatsAppFloat from './components/WhatsAppFloat'
+import { Loader2 } from 'lucide-react'
+import Home from './pages/Home'
+
+// Lazy loading delle pagine secondarie
+const Services = lazy(() => import('./pages/Services'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 
 function ScrollToAnchor() {
   const location = useLocation()
@@ -26,6 +29,13 @@ function ScrollToAnchor() {
   return null
 }
 
+// Componente di caricamento
+const PageLoader = () => (
+  <div className="min-h-[60vh] flex items-center justify-center">
+    <Loader2 className="w-10 h-10 animate-spin text-amber-600" />
+  </div>
+)
+
 export default function App() {
   return (
     <div className="dark">
@@ -34,11 +44,13 @@ export default function App() {
         <div className="min-h-screen bg-gradient-to-br from-stone-200 via-amber-100 to-orange-100">
           <Header />
           <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/servizi" element={<Services />} />
-              <Route path="/privacy" element={<PrivacyPolicy />} />
-            </Routes>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/servizi" element={<Services />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+              </Routes>
+            </Suspense>
           </main>
           <Footer />
           <WhatsAppFloat />

@@ -10,6 +10,7 @@ interface NewsItem {
   fullDescription?: string
   date: string
   image: string
+  rawImage?: string
   videoUrl?: string
 }
 
@@ -21,7 +22,7 @@ const fallbackNewsItems: NewsItem[] = [
     description: "Sconto del 20% su tutti i trattamenti viso per tutta la settimana. Prenota ora il tuo momento di relax!",
     fullDescription: "Celebra la tua bellezza con la nostra promozione speciale per la Festa della Donna. Per tutta la settimana dell'8 Marzo, offriamo uno sconto esclusivo del 20% su tutti i nostri trattamenti viso. Dalla pulizia profonda ai trattamenti anti-age più avanzati, è il momento perfetto per regalarti o regalare una coccola di benessere. Prenota subito il tuo appuntamento, i posti sono limitati!",
     date: "8 Marzo 2025",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: 2,
@@ -30,7 +31,7 @@ const fallbackNewsItems: NewsItem[] = [
     description: "Guarda in anteprima la nostra nuova tecnica di massaggio con pietre calde. Un'esperienza avvolgente.",
     fullDescription: "Siamo entusiasti di introdurre una nuova tecnica di massaggio che combina il calore delle pietre laviche con movimenti fluidi e avvolgenti. Questo trattamento è ideale per sciogliere le tensioni muscolari profonde e favorire un rilassamento totale di corpo e mente. Guarda il video per scoprire come si svolge il trattamento.",
     date: "5 Marzo 2025",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop",
     videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
@@ -40,7 +41,7 @@ const fallbackNewsItems: NewsItem[] = [
     description: "A partire dal mese prossimo saremo aperti anche il Lunedì mattina per venire incontro alle vostre esigenze.",
     fullDescription: "Per venire incontro alle numerose richieste delle nostre clienti, siamo felici di annunciare che a partire dal 1° Giugno estenderemo i nostri orari di apertura. Il centro sarà aperto anche il Lunedì mattina dalle 9:00 alle 13:00. Questo ci permetterà di offrire più disponibilità per i vostri appuntamenti preferiti. Vi aspettiamo!",
     date: "1 Marzo 2025",
-    image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: 4,
@@ -49,7 +50,7 @@ const fallbackNewsItems: NewsItem[] = [
     description: "Siamo felici di presentare la nostra nuova linea di prodotti completamente biologici e naturali.",
     fullDescription: "La natura è la nostra migliore alleata. Da oggi nel nostro centro potrai trovare la nuova linea di prodotti 'BioEssence', certificata 100% biologica e cruelty-free. Creme, oli e sieri ricchi di principi attivi naturali per nutrire la tua pelle rispettando l'ambiente. Vieni a provarli!",
     date: "25 Febbraio 2025",
-    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: 5,
@@ -58,14 +59,23 @@ const fallbackNewsItems: NewsItem[] = [
     description: "Stai organizzando il tuo matrimonio? Scopri i nostri percorsi personalizzati per arrivare radiosa al grande giorno.",
     fullDescription: "Il giorno del tuo matrimonio meriti di essere perfetta. Abbiamo studiato dei percorsi 'Sposa' che iniziano 3 mesi prima del grande evento, per preparare la tua pelle e il tuo corpo al meglio. Il pacchetto include trattamenti viso, corpo, manicure, pedicure e prova trucco. Prenota una consulenza gratuita per creare il tuo percorso su misura.",
     date: "20 Febbraio 2025",
-    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800&auto=format&fit=crop",
   }
 ]
 
 const DEFAULT_IMAGES = {
-  promo: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=2070&auto=format&fit=crop", // Gift/Promo image
-  video: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2073&auto=format&fit=crop", // Playful/Active image
-  news: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=2070&auto=format&fit=crop"  // Generic Salon/News image
+  promo: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=800&auto=format&fit=crop", // Ridotto w da 2070 a 800
+  video: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop", // Ridotto w da 2073 a 800
+  news: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=800&auto=format&fit=crop"  // Ridotto w da 2070 a 800
+}
+
+const optimizeDatoImage = (url: string | undefined, width = 800) => {
+  if (!url) return undefined;
+  // Se è un'immagine di DatoCMS, applica le ottimizzazioni
+  if (url.includes('datocms-assets.com')) {
+    return `${url}?auto=format&fit=crop&w=${width}&q=80`;
+  }
+  return url;
 }
 
 const getEmbedUrl = (url: string) => {
@@ -114,6 +124,9 @@ export default function NewsSection() {
       if (datoItems && datoItems.length > 0) {
         const mappedItems: NewsItem[] = datoItems.map((item: any) => {
           const category = (item.category as 'promo' | 'news' | 'video') || 'news';
+          const rawImage = item.image?.url;
+          const fallbackImage = DEFAULT_IMAGES[category] || DEFAULT_IMAGES.news;
+
           return {
             id: item.id,
             type: category,
@@ -121,8 +134,8 @@ export default function NewsSection() {
             description: item.description,
             fullDescription: item.fullDescription,
             date: new Date(item.date).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' }),
-            // Logica intelligente: Immagine caricata -> Default per categoria -> Default News
-            image: item.image?.url || DEFAULT_IMAGES[category] || DEFAULT_IMAGES.news,
+            image: optimizeDatoImage(rawImage) || fallbackImage,
+            rawImage: rawImage,
             videoUrl: item.videoUrl
           }
         })
@@ -169,6 +182,13 @@ export default function NewsSection() {
                       src={item.image} 
                       alt={item.title}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      width="400"
+                      height="192"
+                      srcSet={item.rawImage && item.rawImage.includes('datocms-assets.com') ? 
+                        `${optimizeDatoImage(item.rawImage, 400)} 400w, ${optimizeDatoImage(item.rawImage, 800)} 800w` 
+                        : undefined}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                     <div className="absolute top-4 left-4">
                       <span className={`
@@ -227,6 +247,13 @@ export default function NewsSection() {
                       src={item.image} 
                       alt={item.title}
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      width="400"
+                      height="192"
+                      srcSet={item.rawImage && item.rawImage.includes('datocms-assets.com') ? 
+                        `${optimizeDatoImage(item.rawImage, 400)} 400w, ${optimizeDatoImage(item.rawImage, 800)} 800w` 
+                        : undefined}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                     <div className="absolute top-4 left-4">
                       <span className={`

@@ -70,6 +70,9 @@ export default function BeforeAfterSection() {
                       src={currentImage.before} 
                       alt="Prima del trattamento"
                       className="w-full h-64 object-cover"
+                      width="600"
+                      height="400"
+                      loading="lazy"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNCRkJGIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOUE0RkU1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiPkFnZ2l1bmdpIGxlIHR1ZSBmb3RvPC90ZXh0Pgo8L3N2Zz4='
@@ -90,6 +93,9 @@ export default function BeforeAfterSection() {
                       src={currentImage.after} 
                       alt="Dopo il trattamento"
                       className="w-full h-64 object-cover"
+                      width="600"
+                      height="400"
+                      loading="lazy"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRkVGM0Y0Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRUY0NDQ0IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiPkFnZ2l1bmdpIGxlIHR1ZSBmb3RvPC90ZXh0Pgo8L3N2Zz4='

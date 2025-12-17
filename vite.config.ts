@@ -10,8 +10,15 @@ export default defineConfig({
     },
   },
   plugins: [tailwindcss(), react()],
-  mode: "development",
   build: {
-    minify: false,
+    minify: 'esbuild',
+    cssMinify: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
+        },
+      },
+    },
   }
 })
