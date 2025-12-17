@@ -1,4 +1,5 @@
 import { Sparkles, Instagram, Facebook, Phone, Mail, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -76,7 +77,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-amber-200/50 mt-8 pt-8 text-center text-gray-600">
-          <p>
+          <p className="mb-2">
             Sito progettato e sviluppato da{' '}
             <a 
               href="https://wa.me/393500082907" 
@@ -87,6 +88,11 @@ export default function Footer() {
               Alessio Forestieri
             </a>
           </p>
+          <div className="text-sm space-x-2">
+            <Link to="/privacy" className="hover:text-amber-600 transition-colors">Privacy Policy</Link>
+            <span>•</span>
+            <span>&copy; {new Date().getFullYear()} Centro Estetico Sonia Forestieri</span>
+          </div>
         </div>
       </div>
     </footer>

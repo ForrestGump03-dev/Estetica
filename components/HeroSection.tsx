@@ -26,8 +26,8 @@ export default function HeroSection() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-serif text-gray-800 mb-6 leading-tight">
-            Bellezza e
-            <span className="text-amber-700 block">Benessere</span>
+            Centro estetico di
+            <span className="text-amber-700 block">Sonia Forestieri</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto">

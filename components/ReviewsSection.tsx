@@ -2,37 +2,37 @@ import { Star, Quote } from 'lucide-react'
 
 const reviews = [
   {
-    name: "Maria Rossi",
+    name: "Maria R.",
     rating: 5,
     text: "Un'esperienza fantastica! Lo staff è molto professionale e l'ambiente è rilassante. Il trattamento anti-age ha dato risultati incredibili. Tornerò sicuramente!",
     treatment: "Trattamento Anti-Age"
   },
   {
-    name: "Elena Bianchi",
+    name: "Elena B.",
     rating: 5,
     text: "Sono cliente da anni e non ho mai trovato un centro estetico migliore. La qualità dei servizi è eccellente e le ragazze sono sempre disponibili e gentili.",
     treatment: "Pulizia del Viso"
   },
   {
-    name: "Giulia Ferrari",
+    name: "Giulia F.",
     rating: 5,
     text: "Il massaggio rilassante è stato meraviglioso! Finalmente ho trovato un posto dove potermi rilassare completamente. Ambiente pulito e accogliente.",
     treatment: "Massaggio Rilassante"
   },
   {
-    name: "Francesca Romano",
+    name: "Francesca P.",
     rating: 5,
     text: "Professionalità e cortesia al top! Il trattamento anticellulite sta dando ottimi risultati. Consiglio vivamente questo centro estetico.",
     treatment: "Trattamento Anticellulite"
   },
   {
-    name: "Anna Verde",
+    name: "Anna V.",
     rating: 5,
     text: "Atmosfera magica e trattamenti di alta qualità. La radiofrequenza ha superato le mie aspettative. Prenotazione facile e prezzi onesti.",
     treatment: "Radiofrequenza"
   },
   {
-    name: "Chiara Blu",
+    name: "Chiara B.",
     rating: 5,
     text: "Un vero e proprio angolo di paradiso! Le estetiste sono competenti e l'ambiente è curato nei minimi dettagli. Lo consiglio a tutte le mie amiche.",
     treatment: "Idratazione Viso"

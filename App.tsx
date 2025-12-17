@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Services from './pages/Services'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import WhatsAppFloat from './components/WhatsAppFloat'
 
 function ScrollToAnchor() {
   const location = useLocation()
@@ -35,9 +37,11 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/servizi" element={<Services />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
             </Routes>
           </main>
           <Footer />
+          <WhatsAppFloat />
         </div>
       </Router>
     </div>

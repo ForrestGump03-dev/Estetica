@@ -31,7 +31,7 @@ const fallbackNewsItems: NewsItem[] = [
     fullDescription: "Siamo entusiasti di introdurre una nuova tecnica di massaggio che combina il calore delle pietre laviche con movimenti fluidi e avvolgenti. Questo trattamento è ideale per sciogliere le tensioni muscolari profonde e favorire un rilassamento totale di corpo e mente. Guarda il video per scoprire come si svolge il trattamento.",
     date: "5 Marzo 2025",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: 3,

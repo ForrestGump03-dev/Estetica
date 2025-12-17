@@ -293,41 +293,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      <section className="bg-amber-50/50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <Award className="h-8 w-8 text-amber-600" />
-              </div>
-              <h3 className="font-semibold text-gray-800 mb-2">Esperienza Certificata</h3>
-              <p className="text-gray-600">
-                Oltre 20 anni di esperienza nel settore dell'estetica professionale
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <Sparkles className="h-8 w-8 text-amber-600" />
-              </div>
-              <h3 className="font-semibold text-gray-800 mb-2">Tecnologie Moderne</h3>
-              <p className="text-gray-600">
-                Utilizzo di prodotti di qualità e tecniche all'avanguardia
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <Users className="h-8 w-8 text-amber-600" />
-              </div>
-              <h3 className="font-semibold text-gray-800 mb-2">Attenzione Personalizzata</h3>
-              <p className="text-gray-600">
-                Ogni trattamento è studiato su misura in base alle esigenze individuali
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
