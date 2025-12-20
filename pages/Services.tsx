@@ -1,6 +1,7 @@
 import { Sparkles, Clock, Users, Award } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import PageTransition from '../components/PageTransition'
+import RevealOnScroll from '../components/RevealOnScroll'
 
 interface Service {
   name: string
@@ -211,18 +212,24 @@ const services: ServiceCategory[] = [
 export default function Services() {
   return (
     <PageTransition>
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-stone-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-amber-100 to-orange-100 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Sparkles className="h-8 w-8 text-amber-600" />
-            <h1 className="text-4xl md:text-6xl font-serif text-gray-800">I Nostri Servizi</h1>
-            <Sparkles className="h-8 w-8 text-amber-600" />
-          </div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Scopri la nostra gamma completa di trattamenti professionali per la cura del corpo e del viso
-          </p>
+      <section className="bg-stone-100 py-20 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-0 w-64 h-64 bg-amber-100/40 rounded-full blur-3xl transform -translate-x-1/2"></div>
+          <div className="absolute bottom-1/4 right-0 w-64 h-64 bg-rose-100/40 rounded-full blur-3xl transform translate-x-1/2"></div>
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <RevealOnScroll>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Sparkles className="h-8 w-8 text-amber-600" />
+              <h1 className="text-4xl md:text-6xl font-serif text-stone-800">I Nostri Servizi</h1>
+              <Sparkles className="h-8 w-8 text-amber-600" />
+            </div>
+            <p className="text-xl text-stone-600 max-w-2xl mx-auto font-light">
+              Scopri la nostra gamma completa di trattamenti professionali per la cura del corpo e del viso
+            </p>
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -232,62 +239,66 @@ export default function Services() {
           <div className="space-y-16">
             {services.map((category, categoryIndex) => (
               <div key={categoryIndex}>
-                <h2 className="text-3xl font-serif text-gray-800 text-center mb-12">
-                  {category.category}
-                </h2>
+                <RevealOnScroll>
+                  <h2 className="text-3xl font-serif text-stone-800 text-center mb-12">
+                    {category.category}
+                  </h2>
+                </RevealOnScroll>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.items.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-amber-200">
-                      <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-                        {service.name}
-                      </h3>
-                      
-                      {/* Descrizione */}
-                      <p className="text-gray-700 mb-4 leading-relaxed">
-                        {service.description}
-                      </p>
-                      
-                      {/* A cosa serve */}
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-800 mb-2">A cosa serve?</h4>
-                        <p className="text-gray-600 text-sm">{service.purpose}</p>
-                      </div>
-                      
-                      {/* Benefici */}
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-800 mb-2">Benefici</h4>
-                        <ul className="space-y-1">
-                          {service.benefits.map((benefit, idx) => (
-                            <li key={idx} className="text-gray-600 text-sm flex items-start gap-2">
-                              <span className="text-amber-600 leading-normal">•</span>
-                              <span>{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      {/* Durata */}
-                      <div className="mb-6 pt-4 border-t border-gray-200">
-                        <div className="flex items-center gap-2 text-gray-700 mb-2">
-                          <Clock className="h-4 w-4 text-amber-600" />
-                          <span className="font-semibold">DURATA:</span>
-                          <span>{service.duration}</span>
+                    <RevealOnScroll key={serviceIndex} delay={serviceIndex * 100}>
+                      <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-stone-100 h-full flex flex-col">
+                        <h3 className="text-2xl font-serif text-stone-800 mb-4">
+                          {service.name}
+                        </h3>
+                        
+                        {/* Descrizione */}
+                        <p className="text-stone-600 mb-6 leading-relaxed flex-grow">
+                          {service.description}
+                        </p>
+                        
+                        {/* A cosa serve */}
+                        <div className="mb-4">
+                          <h4 className="font-semibold text-stone-800 mb-2 text-sm uppercase tracking-wide">A cosa serve?</h4>
+                          <p className="text-stone-600 text-sm">{service.purpose}</p>
                         </div>
-                        {service.sessions && (
-                          <div className="text-gray-700">
-                            <span className="font-semibold">SEDUTE:</span>
-                            <span className="ml-2">{service.sessions}</span>
+                        
+                        {/* Benefici */}
+                        <div className="mb-6">
+                          <h4 className="font-semibold text-stone-800 mb-2 text-sm uppercase tracking-wide">Benefici</h4>
+                          <ul className="space-y-2">
+                            {service.benefits.map((benefit, idx) => (
+                              <li key={idx} className="text-stone-600 text-sm flex items-start gap-2">
+                                <span className="text-amber-600 leading-normal">•</span>
+                                <span>{benefit}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        {/* Durata */}
+                        <div className="mt-auto pt-6 border-t border-stone-100">
+                          <div className="flex items-center justify-between text-stone-600 mb-6">
+                            <div className="flex items-center gap-2">
+                              <Clock className="h-4 w-4 text-amber-600" />
+                              <span className="font-medium text-sm">{service.duration}</span>
+                            </div>
+                            {service.sessions && (
+                              <div className="text-sm font-medium bg-amber-50 text-amber-700 px-3 py-1 rounded-full">
+                                {service.sessions}
+                              </div>
+                            )}
                           </div>
-                        )}
+                          
+                          <a 
+                            href="/#contatti"
+                            className="block w-full bg-stone-900 text-white py-3 rounded-full hover:bg-amber-600 transition-colors text-center font-medium shadow-md"
+                          >
+                            Prenota Ora
+                          </a>
+                        </div>
                       </div>
-                      
-                      <a 
-                        href="/#contatti"
-                        className="block w-full bg-amber-600 text-white py-3 rounded-full hover:bg-amber-700 transition-colors text-center font-medium shadow-md"
-                      >
-                        Prenota Ora
-                      </a>
-                    </div>
+                    </RevealOnScroll>
                   ))}
                 </div>
               </div>
