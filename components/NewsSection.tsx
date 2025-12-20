@@ -1,6 +1,7 @@
 import { Calendar, Tag, ArrowRight, PlayCircle, X, ChevronDown, ChevronUp, Loader2, Instagram, Facebook } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { fetchDatoCMSNews } from '../lib/datocms'
+import RevealOnScroll from './RevealOnScroll'
 
 interface NewsItem {
   id: string | number
@@ -151,15 +152,21 @@ export default function NewsSection() {
   const desktopItems = showAll ? items : items.slice(0, 3)
 
   return (
-    <section id="novita" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-serif text-gray-800 mb-4">Novità & Promozioni</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Rimani aggiornata sulle nostre ultime offerte ed eventi speciali
-          </p>
-        </div>
+    <section id="novita" className="py-24 bg-stone-100 relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
+        <RevealOnScroll>
+          <div className="text-center mb-16">
+            <span className="text-amber-600 font-medium tracking-wider uppercase text-sm mb-3 block">Blog & Novità</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-stone-800 mb-6">
+              Novità & Promozioni
+            </h2>
+            <p className="text-xl text-stone-600 max-w-2xl mx-auto font-light">
+              Rimani aggiornata sulle nostre ultime offerte ed eventi speciali
+            </p>
+          </div>
+        </RevealOnScroll>
 
+        <RevealOnScroll delay={200}>
         {loading ? (
           <div className="flex justify-center py-12">
             <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
@@ -322,6 +329,7 @@ export default function NewsSection() {
             )}
           </>
         )}
+        </RevealOnScroll>
       </div>
 
       {/* Modal */}

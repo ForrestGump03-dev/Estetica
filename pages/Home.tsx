@@ -5,10 +5,11 @@ import BeforeAfterSection from '../components/BeforeAfterSection'
 import NewsSection from '../components/NewsSection'
 import ReviewsSection from '../components/ReviewsSection'
 import ContactSection from '../components/ContactSection'
+import PageTransition from '../components/PageTransition'
 
 export default function Home() {
   return (
-    <div>
+    <PageTransition>
       <HeroSection />
       <ServicesSection />
       <AboutSection />
@@ -16,6 +17,6 @@ export default function Home() {
       <NewsSection />
       <ReviewsSection />
       <ContactSection />
-    </div>
+    </PageTransition>
   )
 }

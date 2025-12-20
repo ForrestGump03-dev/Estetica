@@ -1,5 +1,6 @@
 import { Sparkles, Clock, Users, Award } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import PageTransition from '../components/PageTransition'
 
 interface Service {
   name: string
@@ -209,7 +210,8 @@ const services: ServiceCategory[] = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen">
+    <PageTransition>
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-amber-100 to-orange-100 py-20">
         <div className="container mx-auto px-4 text-center">
@@ -294,5 +296,6 @@ export default function Services() {
         </div>
       </section>
     </div>
+    </PageTransition>
   )
 }

@@ -38,10 +38,10 @@ const PageLoader = () => (
 
 export default function App() {
   return (
-    <div className="dark">
+    <div className="font-sans text-stone-800 antialiased selection:bg-amber-200 selection:text-amber-900">
       <Router>
         <ScrollToAnchor />
-        <div className="min-h-screen bg-gradient-to-br from-stone-200 via-amber-100 to-orange-100">
+        <div className="min-h-screen bg-stone-50">
           <Header />
           <main>
             <Suspense fallback={<PageLoader />}>

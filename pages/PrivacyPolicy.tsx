@@ -1,31 +1,33 @@
 import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import PageTransition from '../components/PageTransition'
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-white py-20">
+    <PageTransition>
+    <div className="min-h-screen bg-stone-50 py-20">
       <div className="container mx-auto px-4 max-w-3xl">
         <Link to="/" className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 mb-8 font-medium">
           <ArrowLeft className="w-4 h-4" />
           Torna alla Home
         </Link>
 
-        <h1 className="text-4xl font-serif text-gray-800 mb-8">Privacy Policy</h1>
+        <h1 className="text-4xl font-serif text-stone-800 mb-8">Privacy Policy</h1>
         
-        <div className="prose prose-amber max-w-none text-gray-600">
+        <div className="prose prose-stone max-w-none text-stone-600">
           <p className="text-lg mb-6">
             Ultimo aggiornamento: {new Date().toLocaleDateString('it-IT')}
           </p>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">1. Titolare del Trattamento</h2>
+          <h2 className="text-2xl font-semibold text-stone-800 mt-8 mb-4">1. Titolare del Trattamento</h2>
           <p>
             Centro Estetico di Sonia Forestieri<br />
             Via Titina De Filippo 36, 90135 Palermo<br />
-            Email: soniaforestieri@gmail.com<br />
+            Email: soniaforestieri@hotmail.it<br />
             Telefono: +39 392 228 1816
           </p>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">2. Tipologia di Dati Raccolti</h2>
+          <h2 className="text-2xl font-semibold text-stone-800 mt-8 mb-4">2. Tipologia di Dati Raccolti</h2>
           <p>
             Questo sito web è una vetrina informativa e <strong>non raccoglie direttamente dati personali</strong> tramite moduli di contatto o registrazione utenti.
           </p>
@@ -41,7 +43,7 @@ export default function PrivacyPolicy() {
             In questi casi, il trattamento dei dati (es. il tuo numero di telefono o indirizzo email) avviene sui rispettivi client di posta o app di messaggistica, al di fuori di questo sito web.
           </p>
 
-          <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">3. Cookie e Contenuti Incorporati</h2>
+          <h2 className="text-2xl font-semibold text-stone-800 mt-8 mb-4">3. Cookie e Contenuti Incorporati</h2>
           <p>
             Questo sito utilizza cookie tecnici strettamente necessari per il funzionamento.
           </p>
@@ -60,5 +62,6 @@ export default function PrivacyPolicy() {
         </div>
       </div>
     </div>
+    </PageTransition>
   )
 }
