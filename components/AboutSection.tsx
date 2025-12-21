@@ -50,7 +50,7 @@ export default function AboutSection() {
               
               <div className="prose prose-lg text-stone-600 mb-8">
                 <p className="leading-relaxed">
-                  Mi chiamo <strong>Sonia Forestieri</strong> e da oltre vent'anni mi dedico al benessere delle mie clienti. 
+                  Mi chiamo <strong>Sonia</strong> e da oltre vent'anni mi dedico al benessere delle mie clienti. 
                   Ho creato questo spazio pensando a un rifugio dove poter staccare dalla frenesia quotidiana e ritrovare se stessi.
                 </p>
                 <p className="leading-relaxed mt-4">

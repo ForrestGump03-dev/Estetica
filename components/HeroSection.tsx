@@ -27,7 +27,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background Slideshow */}
       {heroImages.map((img, index) => (
         <div 
@@ -40,7 +40,7 @@ export default function HeroSection() {
           <img 
             src={img} 
             alt={`Hero background ${index + 1}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </div>
       ))}
