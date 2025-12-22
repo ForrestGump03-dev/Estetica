@@ -1,5 +1,6 @@
 import { Calendar, Tag, ArrowRight, PlayCircle, X, ChevronDown, ChevronUp, Loader2, Instagram, Facebook } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { fetchDatoCMSNews } from '../lib/datocms'
 import RevealOnScroll from './RevealOnScroll'
 
@@ -166,24 +167,23 @@ export default function NewsSection() {
           </div>
         </RevealOnScroll>
 
-        <RevealOnScroll delay={200}>
         {loading ? (
           <div className="flex justify-center py-12">
             <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
           </div>
         ) : (
-          <>
+          <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
             {/* Mobile View: Horizontal Scroll (Slider) */}
             <div className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 -mx-4 px-4 scrollbar-hide">
               {items.map((item) => (
                 <div 
                   key={item.id} 
-                  className="min-w-[85vw] snap-center group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col"
+                  className="min-w-[85vw] snap-center group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col cursor-pointer active:scale-95 transition-transform duration-200"
+                  onClick={() => setSelectedItem(item)}
                 >
                   {/* Image Container */}
                   <div 
-                    className="relative h-48 overflow-hidden cursor-pointer"
-                    onClick={() => setSelectedItem(item)}
+                    className="relative h-48 overflow-hidden"
                   >
                     <img 
                       src={item.image} 
@@ -230,7 +230,6 @@ export default function NewsSection() {
                     </p>
 
                     <button 
-                      onClick={() => setSelectedItem(item)}
                       className="flex items-center gap-2 text-amber-600 font-medium mt-auto"
                     >
                       {item.type === 'video' ? 'Guarda Video' : 'Scopri di più'}
@@ -327,14 +326,13 @@ export default function NewsSection() {
                 </button>
               </div>
             )}
-          </>
+          </div>
         )}
-        </RevealOnScroll>
       </div>
 
       {/* Modal */}
-      {selectedItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={() => setSelectedItem(null)}>
+      {selectedItem && createPortal(
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={() => setSelectedItem(null)}>
           <div 
             className="bg-white rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl relative animate-in fade-in zoom-in duration-300"
             onClick={e => e.stopPropagation()}
@@ -443,7 +441,8 @@ export default function NewsSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   )

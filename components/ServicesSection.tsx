@@ -67,14 +67,14 @@ export default function ServicesSection() {
 
                 {/* Content */}
                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300">
                     <div className="bg-white/20 backdrop-blur-md w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-amber-500 transition-colors duration-300">
                       <service.icon className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="text-2xl font-serif mb-3 border-b border-white/30 pb-3 inline-block">
                       {service.title}
                     </h3>
-                    <p className="text-gray-200 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 h-0 group-hover:h-auto">
+                    <p className="text-gray-200 text-sm leading-relaxed opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-100 h-auto md:h-0 md:group-hover:h-auto">
                       {service.description}
                     </p>
                   </div>

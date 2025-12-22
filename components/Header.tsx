@@ -13,10 +13,11 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 text-2xl font-elegant text-amber-800">
-            {/* Logo placeholder - Aggiungi qui il tuo logo */}
-            <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full flex items-center justify-center shadow-md">
-              <span className="text-white font-serif text-xl font-bold">SF</span>
-            </div>
+            <img 
+              src="/logo_estetica.jpg" 
+              alt="Sonia Forestieri Logo" 
+              className="w-12 h-12 rounded-full object-cover shadow-md border-2 border-amber-100"
+            />
             <span className="font-serif">Sonia Forestieri</span>
           </Link>
 
