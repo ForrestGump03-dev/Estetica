@@ -3,6 +3,7 @@ import { useEffect, Suspense, lazy } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
+import CookieBanner from './components/CookieBanner'
 import { Loader2 } from 'lucide-react'
 import Home from './pages/Home'
 
@@ -54,6 +55,7 @@ export default function App() {
           </main>
           <Footer />
           <WhatsAppFloat />
+          <CookieBanner />
         </div>
       </Router>
     </div>

@@ -16,7 +16,7 @@ export default function AboutSection() {
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-amber-400/30 rounded-2xl transform -translate-x-2 -translate-y-2"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] lg:aspect-[4/5]">
                 <img 
-                  src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&q=80&w=800" 
+                  src="/sonia.jpg" 
                   alt="Sonia Forestieri al lavoro" 
                   className="w-full h-full object-cover"
                 />

@@ -113,6 +113,22 @@ export default function BeforeAfterSection() {
                     </div>
                   </div>
                 </div>
+
+                {/* Navigation buttons */}
+                <button 
+                  onClick={prevSlide}
+                  className="absolute -left-2 md:-left-4 top-1/2 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all hover:bg-white hover:scale-110 border border-stone-100 z-20 cursor-pointer"
+                  aria-label="Precedente"
+                >
+                  <ChevronLeft className="h-6 w-6 text-stone-600" />
+                </button>
+                <button 
+                  onClick={nextSlide}
+                  className="absolute -right-2 md:-right-4 top-1/2 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all hover:bg-white hover:scale-110 border border-stone-100 z-20 cursor-pointer"
+                  aria-label="Successivo"
+                >
+                  <ChevronRight className="h-6 w-6 text-stone-600" />
+                </button>
               </div>
 
               {/* Treatment title */}
@@ -122,22 +138,6 @@ export default function BeforeAfterSection() {
                 </h3>
                 <div className="h-1 w-20 bg-amber-400 mx-auto rounded-full opacity-50"></div>
               </div>
-
-              {/* Navigation buttons */}
-              <button 
-                onClick={prevSlide}
-                className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all hover:bg-white hover:scale-110 border border-stone-100 z-20"
-                aria-label="Precedente"
-              >
-                <ChevronLeft className="h-6 w-6 text-stone-600" />
-              </button>
-              <button 
-                onClick={nextSlide}
-                className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all hover:bg-white hover:scale-110 border border-stone-100 z-20"
-                aria-label="Successivo"
-              >
-                <ChevronRight className="h-6 w-6 text-stone-600" />
-              </button>
             </div>
 
             {/* Dots indicator */}
@@ -146,24 +146,13 @@ export default function BeforeAfterSection() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
+                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                     index === currentIndex ? 'bg-amber-600 w-8' : 'bg-stone-300 w-2 hover:bg-stone-400'
                   }`}
                   aria-label={`Vai alla slide ${index + 1}`}
                 />
               ))}
             </div>
-          </div>
-
-          {/* Note */}
-          <div className="text-center mt-8 bg-amber-50 rounded-xl p-6 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <Camera className="h-5 w-5 text-amber-600" />
-              <span className="font-medium text-stone-800">Risultati Reali</span>
-            </div>
-            <p className="text-stone-600 text-sm">
-              Le immagini mostrano risultati reali ottenuti dalle nostre clienti. I risultati possono variare da persona a persona.
-            </p>
           </div>
         </RevealOnScroll>
       </div>

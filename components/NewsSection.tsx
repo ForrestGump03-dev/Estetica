@@ -113,11 +113,58 @@ const getEmbedUrl = (url: string) => {
   return url;
 }
 
+// Componente per il blocco dei cookie
+const CookieBlocker = ({ onAccept }: { onAccept: () => void }) => (
+  <div className="absolute inset-0 bg-stone-900 flex flex-col items-center justify-center p-6 text-center z-10">
+    <div className="bg-stone-800 p-4 rounded-full mb-4">
+      <PlayCircle className="w-8 h-8 text-stone-400" />
+    </div>
+    <h3 className="text-white font-serif text-xl mb-2">Contenuto bloccato</h3>
+    <p className="text-stone-400 text-sm mb-6 max-w-md">
+      Per visualizzare questo video è necessario accettare i cookie di terze parti (YouTube/Instagram).
+    </p>
+    <button 
+      onClick={onAccept}
+      className="bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition-colors font-medium text-sm"
+    >
+      Accetta e Guarda
+    </button>
+  </div>
+)
+
 export default function NewsSection() {
   const [items, setItems] = useState<NewsItem[]>(fallbackNewsItems)
   const [selectedItem, setSelectedItem] = useState<NewsItem | null>(null)
   const [showAll, setShowAll] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [cookieConsent, setCookieConsent] = useState(localStorage.getItem('cookie-consent'))
+
+  // Ascolta i cambiamenti del consenso (per aggiornare in tempo reale se l'utente accetta dal banner)
+  useEffect(() => {
+    const checkConsent = () => {
+      setCookieConsent(localStorage.getItem('cookie-consent'))
+    }
+    
+    window.addEventListener('storage', checkConsent)
+    // Un piccolo hack per ascoltare anche i cambiamenti nella stessa finestra
+    const originalSetItem = localStorage.setItem
+    localStorage.setItem = function(key, value) {
+      originalSetItem.apply(this, [key, value])
+      if (key === 'cookie-consent') checkConsent()
+    }
+
+    return () => {
+      window.removeEventListener('storage', checkConsent)
+      localStorage.setItem = originalSetItem
+    }
+  }, [])
+
+  const handleAcceptCookies = () => {
+    localStorage.setItem('cookie-consent', 'accepted')
+    setCookieConsent('accepted')
+    // Ricarica la pagina per applicare le modifiche se necessario, o semplicemente aggiorna lo stato
+    window.dispatchEvent(new Event('storage'))
+  }
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -230,7 +277,7 @@ export default function NewsSection() {
                     </p>
 
                     <button 
-                      className="flex items-center gap-2 text-amber-600 font-medium mt-auto"
+                      className="flex items-center gap-2 text-amber-600 font-medium mt-auto cursor-pointer hover:text-amber-700 transition-colors"
                     >
                       {item.type === 'video' ? 'Guarda Video' : 'Scopri di più'}
                       <ArrowRight className="w-4 h-4" />
@@ -295,7 +342,7 @@ export default function NewsSection() {
 
                     <button 
                       onClick={() => setSelectedItem(item)}
-                      className="flex items-center gap-2 text-amber-600 font-medium hover:text-amber-700 transition-colors mt-auto"
+                      className="flex items-center gap-2 text-amber-600 font-medium hover:text-amber-700 transition-colors mt-auto cursor-pointer"
                     >
                       {item.type === 'video' ? 'Guarda Video' : 'Scopri di più'}
                       <ArrowRight className="w-4 h-4" />
@@ -345,11 +392,21 @@ export default function NewsSection() {
             </button>
 
             {selectedItem.type === 'video' && selectedItem.videoUrl ? (
-              selectedItem.videoUrl.includes('instagram.com') ? (
-                <div 
-                  className="h-64 w-full relative group cursor-pointer overflow-hidden" 
-                  onClick={() => window.open(selectedItem.videoUrl, '_blank')}
-                >
+              cookieConsent !== 'accepted' ? (
+                <div className="aspect-video w-full relative bg-stone-900">
+                  <img 
+                    src={selectedItem.image} 
+                    alt={selectedItem.title}
+                    className="w-full h-full object-cover opacity-30 blur-sm"
+                  />
+                  <CookieBlocker onAccept={handleAcceptCookies} />
+                </div>
+              ) : (
+                selectedItem.videoUrl.includes('instagram.com') ? (
+                  <div 
+                    className="h-64 w-full relative group cursor-pointer overflow-hidden" 
+                    onClick={() => window.open(selectedItem.videoUrl, '_blank')}
+                  >
                   <img 
                     src={selectedItem.image} 
                     alt={selectedItem.title}
@@ -389,6 +446,7 @@ export default function NewsSection() {
                     allowFullScreen
                   ></iframe>
                 </div>
+              )
               )
             ) : (
               <div className="h-64 w-full relative">
