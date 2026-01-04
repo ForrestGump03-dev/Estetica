@@ -171,7 +171,12 @@ export default function NewsSection() {
       const datoItems = await fetchDatoCMSNews();
       
       if (datoItems && datoItems.length > 0) {
-        const mappedItems: NewsItem[] = datoItems.map((item: any) => {
+        // Ordina gli articoli per data (dal più recente al meno recente)
+        const sortedDatoItems = [...datoItems].sort((a: any, b: any) => {
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        });
+
+        const mappedItems: NewsItem[] = sortedDatoItems.map((item: any) => {
           const category = (item.category as 'promo' | 'news' | 'video') || 'news';
           const rawImage = item.image?.url;
           const fallbackImage = DEFAULT_IMAGES[category] || DEFAULT_IMAGES.news;
