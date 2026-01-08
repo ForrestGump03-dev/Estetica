@@ -1,10 +1,17 @@
 import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import PageTransition from '../components/PageTransition'
+import { Helmet } from 'react-helmet-async'
 
 export default function PrivacyPolicy() {
   return (
     <PageTransition>
+      <Helmet>
+        <title>Privacy Policy - Sonia Forestieri Estetica</title>
+        <meta name="description" content="Privacy Policy del sito Sonia Forestieri Estetica. Informazioni sul trattamento dei dati personali." />
+        <meta name="robots" content="noindex" />
+        <link rel="canonical" href="https://www.soniaforestieri.it/privacy" />
+      </Helmet>
     <div className="min-h-screen bg-stone-50 py-20">
       <div className="container mx-auto px-4 max-w-3xl">
         <Link to="/" className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 mb-8 font-medium">

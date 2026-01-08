@@ -2,6 +2,7 @@ import { Sparkles, Clock, Users, Award } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import PageTransition from '../components/PageTransition'
 import RevealOnScroll from '../components/RevealOnScroll'
+import { Helmet } from 'react-helmet-async'
 
 interface Service {
   name: string
@@ -211,8 +212,16 @@ const services: ServiceCategory[] = [
 
 export default function Services() {
   return (
-    <PageTransition>
-      <div className="min-h-screen bg-stone-50">
+    <PageTransition>      <Helmet>
+        <title>I Nostri Servizi - Sonia Forestieri Estetica Palermo</title>
+        <meta name="description" content="Scopri tutti i trattamenti estetici offerti: Epilazione laser, trattamenti viso anti-age, massaggi, manicure e pedicure. Listino completo." />
+        <meta name="keywords" content="listino prezzi estetica Palermo, servizi centro estetico, epilazione laser Palermo, trattamenti corpo, massaggi Palermo, pulizia viso prezzi" />
+        <link rel="canonical" href="https://www.soniaforestieri.it/servizi" />
+        
+        <meta property="og:title" content="I Nostri Servizi - Sonia Forestieri Estetica Palermo" />
+        <meta property="og:description" content="Scopri tutti i trattamenti estetici offerti: Epilazione laser, trattamenti viso anti-age, massaggi, manicure e pedicure." />
+        <meta property="og:url" content="https://www.soniaforestieri.it/servizi" />
+      </Helmet>      <div className="min-h-screen bg-stone-50">
       {/* Hero Section */}
       <section className="bg-stone-100 py-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
