@@ -28,5 +28,9 @@
   },
   "optionalDependencies": {
     "rollup": "^4.39.0"
+  },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom"
   }
 }
