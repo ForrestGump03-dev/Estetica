@@ -1,4 +1,4 @@
-import { Calendar, Tag, ArrowRight, PlayCircle, X, ChevronDown, ChevronUp, Loader2, Instagram, Facebook } from 'lucide-react'
+import { Calendar, ArrowRight, PlayCircle, X, ChevronDown, ChevronUp, Loader2, Instagram, Facebook } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { fetchDatoCMSNews } from '../lib/datocms'

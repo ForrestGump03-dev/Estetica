@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://soniaforestieri.it/sitemap.xml
+Sitemap: https://www.soniaforestieri.it/sitemap.xml
 
 # Blocca directory non necessarie
 Disallow: /node_modules/
